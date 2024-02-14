@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wolfspritetest_0: 3543029922454151642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
