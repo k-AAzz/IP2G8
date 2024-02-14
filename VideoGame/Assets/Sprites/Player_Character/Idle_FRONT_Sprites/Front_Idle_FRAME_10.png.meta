@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 67756b779aad67f44b9f59bb44e2969d
+guid: 7adfdd524d8930e42ada530c5b95a38d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5206329151423470171
-    second: wolfspritetest8_0
+      213: 4014265424863406313
+    second: Front_Idle_FRAME_10_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wolfspritetest8_0
+      name: Front_Idle_FRAME_10_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 34
-        width: 425
-        height: 461
+        x: 54
+        y: 5
+        width: 421
+        height: 459
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5a5b5667c8904840800000000000000
-      internalID: 5206329151423470171
+      spriteID: 9e8ad1ba22985b730800000000000000
+      internalID: 4014265424863406313
       vertices: []
       indices: 
       edges: []
@@ -123,14 +123,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Front_Idle_FRAME_10_0: 4014265424863406313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
