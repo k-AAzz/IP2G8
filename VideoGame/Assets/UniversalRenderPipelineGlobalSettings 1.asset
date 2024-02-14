@@ -10,20 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ec995e51a6e251468d2a3fd8a686257, type: 3}
-  m_Name: UniversalRenderPipelineGlobalSettings
+  m_Name: UniversalRenderPipelineGlobalSettings 1
   m_EditorClassIdentifier: 
   m_Settings:
     m_SettingsList: []
     m_RuntimeSettings: []
   m_AssetVersion: 5
-<<<<<<< HEAD
-  m_DefaultVolumeProfile: {fileID: 11400000, guid: 2539d1213d195cb489dc5538769c5cc8, type: 2}
-=======
-  m_DefaultVolumeProfile: {fileID: 11400000, guid: 8cee76fe6a299fa45baa5740b475e70e, type: 2}
->>>>>>> 29adb3adf40587c4f786e644367b50f188ebc67d
+  m_DefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:
   - Default
-  m_ValidRenderingLayers: 0
+  m_ValidRenderingLayers: 1
   lightLayerName0: 
   lightLayerName1: 
   lightLayerName2: 
