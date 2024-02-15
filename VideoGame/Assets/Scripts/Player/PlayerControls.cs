@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_CONTROLS : MonoBehaviour
+public class PlayerControls : MonoBehaviour
 {
 
-    public float moveSpeed = 5f;
+    public float moveSpeed = 4f;
+    public float friction = 1.5f;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -24,6 +25,13 @@ public class Player_CONTROLS : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        //Times movement vector by current player movespeed
+        Vector2 veloctiy = movement * moveSpeed;
+
+        //Apply friction to reduce speed
+        veloctiy *= friction;
+
+        //Move the rigidboy using the calculation including friction
+        rb.MovePosition(rb.position + veloctiy * Time.fixedDeltaTime);
     }
 }
