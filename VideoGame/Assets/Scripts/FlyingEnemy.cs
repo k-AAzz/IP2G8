@@ -16,6 +16,11 @@ public class FlyingEnemy : MonoBehaviour
 
     public bool playerInAttackRange;
 
+    public GameObject bullet;
+    public Transform bulletPos;
+
+    private float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +32,14 @@ public class FlyingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, whatIsPlayer);
 
-        if (playerInAttackRange)
+        if (playerInAttackRange && timer > 2)
         {
             AttackPlayer();
+            timer = 0;
         }
         else
         {
@@ -49,5 +57,7 @@ public class FlyingEnemy : MonoBehaviour
         agent.SetDestination(transform.position);
 
         transform.right = target.position - transform.position;
+
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
 }
