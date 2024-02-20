@@ -3023,6 +3023,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerInAttackRange: 1
+  bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
+  bulletPos: {fileID: 1605398563}
 --- !u!1 &1661674458
 GameObject:
   m_ObjectHideFlags: 0

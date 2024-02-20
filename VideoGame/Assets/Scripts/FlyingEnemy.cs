@@ -41,7 +41,7 @@ public class FlyingEnemy : MonoBehaviour
             AttackPlayer();
             timer = 0;
         }
-        else
+        else if(!playerInAttackRange)
         {
             ChasePlayer();
         }
