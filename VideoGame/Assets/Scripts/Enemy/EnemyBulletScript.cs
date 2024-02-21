@@ -8,6 +8,8 @@ public class EnemyBulletScript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private float timer;
+
+    public int damage = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,14 @@ public class EnemyBulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject) ;
+            var player = other.gameObject.GetComponent<PlayerHealth>();
+
+            if (player)
+            {
+                player.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
         }
     }
 }
