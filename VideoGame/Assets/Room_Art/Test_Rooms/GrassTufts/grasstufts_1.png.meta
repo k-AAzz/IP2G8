@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: a5982c9183a20bc41b69cc2448a6497f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5422314274741128827
+    second: grasstufts_1_0
+  - first:
+      213: 5920421721245174826
+    second: grasstufts_1_1
+  - first:
+      213: 2527289175004137711
+    second: grasstufts_1_2
+  - first:
+      213: -4133330726461177305
+    second: grasstufts_1_3
+  - first:
+      213: -2599973942587540772
+    second: grasstufts_1_4
+  - first:
+      213: -6936287463240083409
+    second: grasstufts_1_5
+  - first:
+      213: -4523958249204311587
+    second: grasstufts_1_6
+  - first:
+      213: -4324252898261371111
+    second: grasstufts_1_7
+  - first:
+      213: -4327942162207394665
+    second: grasstufts_1_8
+  - first:
+      213: 7493912246543289811
+    second: grasstufts_1_9
+  - first:
+      213: 1954651346709800550
+    second: grasstufts_1_10
+  - first:
+      213: -7531166414650625146
+    second: grasstufts_1_11
+  - first:
+      213: 4533592741431314285
+    second: grasstufts_1_12
+  - first:
+      213: 4581251926450168817
+    second: grasstufts_1_13
+  - first:
+      213: 6872949372974313795
+    second: grasstufts_1_14
+  - first:
+      213: 6528824818703890922
+    second: grasstufts_1_15
+  - first:
+      213: -8855647000357232400
+    second: grasstufts_1_16
+  - first:
+      213: -7734865398325263444
+    second: grasstufts_1_17
+  - first:
+      213: -6631786154124660483
+    second: grasstufts_1_18
+  - first:
+      213: 3651849007626081242
+    second: grasstufts_1_19
+  - first:
+      213: 2211962346664542731
+    second: grasstufts_1_20
+  - first:
+      213: -9129287286641643844
+    second: grasstufts_1_21
+  - first:
+      213: 3667810334869131153
+    second: grasstufts_1_22
+  - first:
+      213: 2126851373226574256
+    second: grasstufts_1_23
+  - first:
+      213: -5869532020522140213
+    second: grasstufts_1_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grasstufts_1_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 96
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581768155e110c4b0800000000000000
+      internalID: -5422314274741128827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 101
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c435f0030992250800000000000000
+      internalID: 5920421721245174826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 96
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8cfc05d1cb21320800000000000000
+      internalID: 2527289175004137711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 101
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72203168a9573a6c0800000000000000
+      internalID: -4133330726461177305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 81
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda3cc679790bebd0800000000000000
+      internalID: -2599973942587540772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 54
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28549d5d4b5dbf90800000000000000
+      internalID: -6936287463240083409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 81
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd99a79f0fba731c0800000000000000
+      internalID: -4523958249204311587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_7
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 57
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9177d2066ea2df3c0800000000000000
+      internalID: -4324252898261371111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 54
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794313da88f00f3c0800000000000000
+      internalID: -4327942162207394665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd8929db79bff760800000000000000
+      internalID: 7493912246543289811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_10
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 59
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666606c2b01502b10800000000000000
+      internalID: 1954651346709800550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_11
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 683b5663c0ceb7790800000000000000
+      internalID: -7531166414650625146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 59
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d678d4d049e8aee30800000000000000
+      internalID: 4533592741431314285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 45
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3e2a6ca50e39f30800000000000000
+      internalID: 4581251926450168817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 39
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341b06f4a0f916f50800000000000000
+      internalID: 6872949372974313795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_15
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 45
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae97997d49b0b9a50800000000000000
+      internalID: 6528824818703890922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_16
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 39
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0247fe8fb6a1580800000000000000
+      internalID: -8855647000357232400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_17
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 54
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3cc5bb6ec38a490800000000000000
+      internalID: -7734865398325263444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_18
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 45
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0bb0921a927f3a0800000000000000
+      internalID: -6631786154124660483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 39
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad35ae8f259fda230800000000000000
+      internalID: 3651849007626081242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_20
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 39
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02ca79e80872be10800000000000000
+      internalID: 2211962346664542731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe2c33f4914e4180800000000000000
+      internalID: -9129287286641643844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_22
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 17
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f8161111ea6e230800000000000000
+      internalID: 3667810334869131153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 12
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1c83f2e08148d10800000000000000
+      internalID: 2126851373226574256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstufts_1_24
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 17
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd3ff6b9bb3b8ea0800000000000000
+      internalID: -5869532020522140213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      grasstufts_1_0: -5422314274741128827
+      grasstufts_1_1: 5920421721245174826
+      grasstufts_1_10: 1954651346709800550
+      grasstufts_1_11: -7531166414650625146
+      grasstufts_1_12: 4533592741431314285
+      grasstufts_1_13: 4581251926450168817
+      grasstufts_1_14: 6872949372974313795
+      grasstufts_1_15: 6528824818703890922
+      grasstufts_1_16: -8855647000357232400
+      grasstufts_1_17: -7734865398325263444
+      grasstufts_1_18: -6631786154124660483
+      grasstufts_1_19: 3651849007626081242
+      grasstufts_1_2: 2527289175004137711
+      grasstufts_1_20: 2211962346664542731
+      grasstufts_1_21: -9129287286641643844
+      grasstufts_1_22: 3667810334869131153
+      grasstufts_1_23: 2126851373226574256
+      grasstufts_1_24: -5869532020522140213
+      grasstufts_1_3: -4133330726461177305
+      grasstufts_1_4: -2599973942587540772
+      grasstufts_1_5: -6936287463240083409
+      grasstufts_1_6: -4523958249204311587
+      grasstufts_1_7: -4324252898261371111
+      grasstufts_1_8: -4327942162207394665
+      grasstufts_1_9: 7493912246543289811
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
