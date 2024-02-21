@@ -51,3 +51,6 @@ TagManager:
   - name: PlayerFRONT
     uniqueID: 1245536511
     locked: 0
+  - name: Trees Front
+    uniqueID: 2038771645
+    locked: 0
