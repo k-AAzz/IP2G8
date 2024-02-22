@@ -6612,6 +6612,7 @@ MonoBehaviour:
   target: {fileID: 1891179966}
   health: 100
   me: {fileID: 294028973}
+  items: {fileID: 843010102}
 --- !u!212 &294028976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11516,7 +11517,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5ef9393eb121ff741856548d6616a583, type: 3}
   rareItems: []
   epicItems: []
-  legendaryItems: []
+  legendaryItems:
+  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
   spawnLocation: {fileID: 843010102}
   player: {fileID: 617387924}
   healthBar: {fileID: 1238109333}
@@ -16702,6 +16704,7 @@ MonoBehaviour:
   bulletPos: {fileID: 1605398563}
   health: 100
   me: {fileID: 1605398559}
+  items: {fileID: 843010102}
 --- !u!1 &1622394793
 GameObject:
   m_ObjectHideFlags: 0
