@@ -20,7 +20,7 @@ public class Item : MonoBehaviour
         {
             switch (chosenItem.name)
             {
-                case "Boots":
+                case "boots_item":
                     //Boots Action
                     PlayerControls playerControls = other.GetComponent<PlayerControls>();
                     if (playerControls != null)
@@ -40,7 +40,7 @@ public class Item : MonoBehaviour
                     }
                     break;
 
-                case "Ring":
+                case "ring_item":
                     //Ring Action
                     break;
 
@@ -54,3 +54,4 @@ public class Item : MonoBehaviour
         }
     }
 }
+ 
