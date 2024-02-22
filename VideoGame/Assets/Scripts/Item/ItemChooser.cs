@@ -89,9 +89,8 @@ public class ItemChooser : MonoBehaviour
             }
             if (chosenItem.name == "heart_item_0")
             {
-                healthBar.GetComponent<HealthBar>().CreateEmptyHeart(); //Enduring Vigor
-                healthBar.GetComponent<HealthBar>().CreateEmptyHeart();
                 player.GetComponent<PlayerHealth>().maxHealthIncrease();
+                healthBar.GetComponent<HealthBar>().DrawHearts(); //Enduring Vigor
                 Debug.Log("What the");
             }
             if (chosenItem.name == "Ring")
