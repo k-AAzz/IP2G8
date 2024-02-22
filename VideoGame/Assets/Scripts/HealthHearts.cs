@@ -16,11 +16,6 @@ public class HealthHearts : MonoBehaviour
         heartImage = GetComponent<Image>();
     }
 
-    private void Start()
-    {
-        SetHeartSize(new Vector2(25f, 25f));
-    }
-
     public void SetHeartImage(HeartStatus heartStatus)
     {
         switch (heartStatus)
@@ -38,14 +33,7 @@ public class HealthHearts : MonoBehaviour
                 break;
         }
     }
-    //Changes the size of the hearts
-    public void SetHeartSize(Vector2 newSize)
-    {
-        RectTransform rectTransform = GetComponent<RectTransform>();
-        rectTransform.sizeDelta = newSize;
-    }
 }
-
 
 
 public enum HeartStatus

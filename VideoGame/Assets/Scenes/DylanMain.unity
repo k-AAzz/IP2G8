@@ -6612,7 +6612,11 @@ MonoBehaviour:
   target: {fileID: 1891179966}
   health: 100
   me: {fileID: 294028973}
-  items: {fileID: 843010102}
+  enemyDrop:
+  - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
+  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
+  spawnLocation: {fileID: 294028973}
+  dropChance: 100
 --- !u!212 &294028976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15117,7 +15121,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 40, y: 0}
+  m_Spacing: {x: 25, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1238109336
@@ -15132,7 +15136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c51f08e466d524e8d5453876a8d393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartPrefab: {fileID: 2579902246187675077, guid: 63da631cb31724142b94b40474f25edf, type: 3}
+  heartPrefab: {fileID: 3333865327306283255, guid: 0acac565ba0684944bf5527c1f4fefa7, type: 3}
   playerHealth: {fileID: 1891179973}
 --- !u!222 &1238109337
 CanvasRenderer:
@@ -17877,7 +17881,11 @@ MonoBehaviour:
   bulletPos: {fileID: 1605398563}
   health: 100
   me: {fileID: 1605398559}
-  items: {fileID: 843010102}
+  enemyDrop:
+  - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
+  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
+  spawnLocation: {fileID: 1605398559}
+  dropChance: 100
 --- !u!1 &1622394793
 GameObject:
   m_ObjectHideFlags: 0
