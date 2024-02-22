@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bush_2_brambles_bottom_new_0: -8186799134428156333
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

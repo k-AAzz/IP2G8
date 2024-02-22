@@ -32,6 +32,9 @@ public class ItemChooser : MonoBehaviour
 
     public void SpawnRandomItem()
     {
+        //Create new seed based on game tick so it's random each time
+        Random.InitState(System.Environment.TickCount);
+
         //Generate a random value between 0 -> 100
         int randomValue = Random.Range(0, 100);
 
@@ -70,7 +73,6 @@ public class ItemChooser : MonoBehaviour
             newItem.transform.position = spawnLocation.transform.position;
             newItem.transform.position += offset;
 
-
             //Add a sprite renderer with values
             SpriteRenderer spriteRenderer = newItem.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = chosenItem;
@@ -80,23 +82,16 @@ public class ItemChooser : MonoBehaviour
             float scaleMultiplier = 2f;
             newItem.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1.0f);
 
-            Debug.Log("Item: " + chosenItem.name);
+            //Attach item script to the object and run internal function
+            Item item = newItem.AddComponent<Item>();
+            item.InitializeItem(chosenItem, itemsArray);
 
-            if (chosenItem.name == "Boots")
-            {
-                player.GetComponent<PlayerControls>().StatboostSpeed(); //Boots of swiftness from concept doc
-                Debug.Log("Hell yeah");
-            }
-            if (chosenItem.name == "heart_item_0")
-            {
-                player.GetComponent<PlayerHealth>().maxHealthIncrease();
-                healthBar.GetComponent<HealthBar>().DrawHearts(); //Enduring Vigor
-                Debug.Log("What the");
-            }
-            if (chosenItem.name == "Ring")
-            {
-                player.GetComponent<PlayerHealth>().Start();
-            }
+            //Attach 2d collider with trigger so it can be interacted with
+            BoxCollider2D collider = newItem.AddComponent<BoxCollider2D>();
+            collider.isTrigger = true;
+
+            //Debug log item
+            Debug.Log("Item: " + chosenItem.name);
         }
         else
         {
