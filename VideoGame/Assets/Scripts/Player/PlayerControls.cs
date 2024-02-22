@@ -34,4 +34,9 @@ public class PlayerControls : MonoBehaviour
         //Move the rigidboy using the calculation including friction
         rb.MovePosition(rb.position + veloctiy * Time.fixedDeltaTime);
     }
+
+    public void StatboostSpeed()
+    {
+        moveSpeed = moveSpeed + 3;
+    }
 }

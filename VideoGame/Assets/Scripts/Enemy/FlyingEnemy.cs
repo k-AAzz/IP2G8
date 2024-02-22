@@ -21,6 +21,11 @@ public class FlyingEnemy : MonoBehaviour
 
     private float timer;
 
+    public float health = 100;
+    bool isDead = false;
+    public GameObject me;
+
+    public GameObject items;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +50,15 @@ public class FlyingEnemy : MonoBehaviour
         {
             ChasePlayer();
         }
+
+        if(isDead == true)
+        {
+            Destroy(me);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TakeDamage(35);
+        }
     }
 
     void ChasePlayer()
@@ -59,5 +73,16 @@ public class FlyingEnemy : MonoBehaviour
         transform.right = target.position - transform.position;
 
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+    }
+
+    public void TakeDamage(int damage = 35) //Take damage function
+    {
+        health -= damage;
+
+        if (health < 0)
+        {
+            isDead = true; //If health is less than 0, enemy is dead
+            items.GetComponent<ItemChooser>().SpawnRandomItem();
+        }
     }
 }

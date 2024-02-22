@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnPlayerDamaged;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         health = maxHealth;
     }
@@ -34,5 +34,10 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
 
         OnPlayerDamaged?.Invoke();
+    }
+
+    public void maxHealthIncrease()
+    {
+        maxHealth = maxHealth + 4;
     }
 }

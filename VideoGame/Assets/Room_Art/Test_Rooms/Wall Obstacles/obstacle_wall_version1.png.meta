@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      obstacle_wall_version1_0: 5636171005033773578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

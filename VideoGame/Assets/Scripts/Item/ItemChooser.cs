@@ -12,7 +12,9 @@ public class ItemChooser : MonoBehaviour
 
     [Header("References")]
     public GameObject spawnLocation;
-
+    public GameObject player;
+    public GameObject healthBar;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class ItemChooser : MonoBehaviour
         }
     }
 
-    void SpawnRandomItem()
+    public void SpawnRandomItem()
     {
         //Generate a random value between 0 -> 100
         int randomValue = Random.Range(0, 100);
@@ -79,6 +81,23 @@ public class ItemChooser : MonoBehaviour
             newItem.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1.0f);
 
             Debug.Log("Item: " + chosenItem.name);
+
+            if (chosenItem.name == "Boots")
+            {
+                player.GetComponent<PlayerControls>().StatboostSpeed(); //Boots of swiftness from concept doc
+                Debug.Log("Hell yeah");
+            }
+            if (chosenItem.name == "heart_item_0")
+            {
+                healthBar.GetComponent<HealthBar>().CreateEmptyHeart(); //Enduring Vigor
+                healthBar.GetComponent<HealthBar>().CreateEmptyHeart();
+                player.GetComponent<PlayerHealth>().maxHealthIncrease();
+                Debug.Log("What the");
+            }
+            if (chosenItem.name == "Ring")
+            {
+                player.GetComponent<PlayerHealth>().Start();
+            }
         }
         else
         {

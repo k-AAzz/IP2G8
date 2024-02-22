@@ -1776,6 +1776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1891179966}
+  health: 100
+  me: {fileID: 294028973}
 --- !u!212 &294028976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2942,7 +2944,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.006488681}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2952,7 +2954,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3.4786394}
   m_EdgeRadius: 0
 --- !u!1 &393244080
 GameObject:
@@ -4176,6 +4178,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fed7638580308334481dc07521d927bd, type: 3}
+--- !u!1 &617387924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2317846551336644536, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
+  m_PrefabInstance: {fileID: 8621596062749752709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,6 +6427,8 @@ MonoBehaviour:
   epicItems: []
   legendaryItems: []
   spawnLocation: {fileID: 843010102}
+  player: {fileID: 617387924}
+  healthBar: {fileID: 1238109333}
 --- !u!1 &846289375
 GameObject:
   m_ObjectHideFlags: 0
@@ -6560,7 +6569,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.037212014}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6570,7 +6579,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3.5750659}
   m_EdgeRadius: 0
 --- !u!1 &852868376
 GameObject:
@@ -11514,6 +11523,8 @@ MonoBehaviour:
   playerInAttackRange: 1
   bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
   bulletPos: {fileID: 1605398563}
+  health: 100
+  me: {fileID: 1605398559}
 --- !u!1 &1622394793
 GameObject:
   m_ObjectHideFlags: 0
@@ -13450,7 +13461,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4039267985435885174, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
   m_PrefabInstance: {fileID: 8621596062749752709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 617387924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28023f5abe3c79644bae2365b6eb4f9a, type: 3}
