@@ -6267,7 +6267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252065010}
   m_Layer: 5
-  m_Name: Player_Portrait
+  m_Name: PlayerPortrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8097,7 +8097,7 @@ GameObject:
   - component: {fileID: 402197109}
   - component: {fileID: 402197108}
   m_Layer: 5
-  m_Name: Gem_graphic
+  m_Name: Gem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8112,14 +8112,14 @@ RectTransform:
   m_GameObject: {fileID: 402197106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7083, y: 0.8984342, z: 0.7083}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.54, y: 0.7463916, z: 0.58843386}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1733326176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 2}
+  m_AnchoredPosition: {x: -8.8, y: 5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402197108
@@ -15097,7 +15097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -730.1, y: -105}
+  m_AnchoredPosition: {x: -743.4, y: -91.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1238109335
@@ -17111,6 +17111,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1565281734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565281736}
+  - component: {fileID: 1565281735}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1565281735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565281734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6b02f89a9163b4caf0fa0afef1bee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemCount: 0
+  gemCountText: {fileID: 2116554698}
+--- !u!4 &1565281736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565281734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 313.21466, y: 853.3988, z: -4.2818117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570211885
 GameObject:
   m_ObjectHideFlags: 0
@@ -18386,7 +18432,7 @@ GameObject:
   - component: {fileID: 1666360744}
   - component: {fileID: 1666360743}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI / HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19012,7 +19058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 732, y: 466}
+  m_AnchoredPosition: {x: -846.5, y: 332}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1739899382
@@ -21787,7 +21833,7 @@ GameObject:
   - component: {fileID: 2116554699}
   - component: {fileID: 2116554698}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GemText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21809,7 +21855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 147, y: -5.1503906}
+  m_AnchoredPosition: {x: 132.7, y: -5.1503906}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.4999998, y: 0.39699218}
 --- !u!114 &2116554698
@@ -22144,3 +22190,4 @@ SceneRoots:
   - {fileID: 1570211886}
   - {fileID: 8109421}
   - {fileID: 307231924}
+  - {fileID: 1565281736}
