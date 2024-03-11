@@ -36,9 +36,9 @@ public class PlayerHealth : MonoBehaviour
         OnPlayerDamaged?.Invoke();
     }
 
-    public void maxHealthIncrease()
+    public void MaxHealthIncrease()
     {
-        maxHealth = maxHealth + 4;
+        maxHealth += 4;
 
         health = maxHealth;
     }

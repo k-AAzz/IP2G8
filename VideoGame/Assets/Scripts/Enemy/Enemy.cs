@@ -36,10 +36,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(me);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamage(35);
-        }
     }
 
     void SpawnDrop(Sprite[] itemsArray)
@@ -77,7 +73,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage = 35) //Take damage function
+    public void TakeDamage(int damage) //Take damage function
     {
         health -= damage;
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -59,10 +60,6 @@ public class FlyingEnemy : MonoBehaviour
         {
             Destroy(me);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamage(35);
-        }
     }
 
     void ChasePlayer()
@@ -84,7 +81,7 @@ public class FlyingEnemy : MonoBehaviour
         if (itemsArray != null && itemsArray.Length > 0)
         {
             UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
-            int randomIndex = Random.Range(0, itemsArray.Length);
+            int randomIndex = UnityEngine.Random.Range(0, itemsArray.Length);
             Debug.Log("Random Index: " + randomIndex);
             Debug.Log("Array Length: " + itemsArray.Length);
 
@@ -114,7 +111,7 @@ public class FlyingEnemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage = 35) //Take damage function
+    public void TakeDamage(int damage) //Take damage function
     {
         health -= damage;
 
@@ -123,7 +120,7 @@ public class FlyingEnemy : MonoBehaviour
             isDead = true; //If health is less than 0, enemy is dead
 
             //Percentage Chance for a drop from an enemy
-            int randomValue = Random.Range(0, 100);
+            int randomValue = UnityEngine.Random.Range(0, 100);
 
             if (randomValue <= dropChance)
             {

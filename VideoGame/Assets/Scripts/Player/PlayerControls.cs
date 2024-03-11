@@ -13,10 +13,19 @@ public class PlayerControls : MonoBehaviour
 
     Vector2 movement;
 
+    public Transform Aim;
+    private bool isWalking;
+
     void Update()
     {
+        //store last move direction
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        movement.Normalize();
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -33,6 +42,7 @@ public class PlayerControls : MonoBehaviour
 
         //Move the rigidboy using the calculation including friction
         rb.MovePosition(rb.position + veloctiy * Time.fixedDeltaTime);
+
     }
 
     public void StatboostSpeed()

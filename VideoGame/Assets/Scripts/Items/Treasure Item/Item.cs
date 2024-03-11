@@ -46,7 +46,7 @@ public class Item : MonoBehaviour
                 case "heart_item_0":
                     //Health Action
                     PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-                    playerHealth.maxHealthIncrease();
+                    playerHealth.MaxHealthIncrease();
 
                     itemName = "Heart Crystal";
                     description = "Grants a bonus Heart Container";
