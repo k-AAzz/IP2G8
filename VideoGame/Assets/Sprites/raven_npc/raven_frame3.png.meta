@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 986a5b2835e2454458626d532291a51e
+guid: 858ea3f89dbcf284db6ea8c07c196540
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5770331544319642092
-    second: UP_Idle_FRAME_3_0
+      213: -8218396715054276932
+    second: raven_frame3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UP_Idle_FRAME_3_0
+      name: raven_frame3_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 8
-        width: 398
-        height: 453
+        x: 14
+        y: 3
+        width: 375
+        height: 474
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce9476f87f5541050800000000000000
-      internalID: 5770331544319642092
+      spriteID: cbed3f70bb362fd80800000000000000
+      internalID: -8218396715054276932
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      UP_Idle_FRAME_3_0: 5770331544319642092
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

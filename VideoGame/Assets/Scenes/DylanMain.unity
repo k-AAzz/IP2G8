@@ -21801,7 +21801,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a6a118d2e6cd31643bfc830773379645, type: 3}
   epicItems:
   - {fileID: 21300000, guid: 69674cad7d16be44fa393c3a2d8c193c, type: 3}
-  - {fileID: 0}
   legendaryItems: []
   spawnLocation: {fileID: 843010102}
   player: {fileID: 617387924}

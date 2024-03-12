@@ -46,6 +46,16 @@ public class Item : MonoBehaviour
                     Debug.Log("Bonus MoveSpeed!");
                 break;
 
+                case "amuletOfVitality":
+                    //Boots Action
+
+                    itemName = "Boots of Swiftness";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "common";
+
+                    Debug.Log("Bonus MoveSpeed!");
+                    break;
+
                 case "gauntletsOfStrength":
                     //Health Action
                     PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
@@ -102,7 +112,7 @@ public class Item : MonoBehaviour
 
                 //Epic Items
 
-                case "Amulet Of Ascendence":
+                case "amuletOfAscendance":
                     //Ring Action
 
                     itemName = "Frozen Sphere";
