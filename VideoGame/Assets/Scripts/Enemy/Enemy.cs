@@ -38,10 +38,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(me);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamage(35);
-        }
     }
 
     void SpawnDrop(Sprite[] itemsArray)
@@ -79,22 +75,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            var player = other.gameObject.GetComponent<PlayerHealth>();
-
-            if (player)
-            {
-                player.TakeDamage(damage);
-            }
-
-            Destroy(gameObject);
-        }
-    }
-
-    public void TakeDamage(int damage = 35) //Take damage function
+    public void TakeDamage(int damage) //Take damage function
     {
         health -= damage;
 
