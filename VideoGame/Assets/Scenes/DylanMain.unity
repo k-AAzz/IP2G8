@@ -6127,6 +6127,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &223676063
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,6 +6287,8 @@ MonoBehaviour:
   flyingEnemy: {fileID: 1605398564}
   weaponType: 0
   bulletLife: 2
+=======
+>>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 =======
 >>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 --- !u!1 &232193145
@@ -6844,7 +6847,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 6.669, y: -0.512, z: 0}
+=======
+  m_LocalPosition: {x: 6.69, y: -0.5172546, z: 0}
+>>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 =======
   m_LocalPosition: {x: 6.69, y: -0.5172546, z: 0}
 >>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
@@ -17367,6 +17374,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1550424713
 GameObject:
   m_ObjectHideFlags: 0
@@ -17403,6 +17411,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -2.593}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 =======
 >>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 --- !u!1 &1559239140
@@ -18361,6 +18371,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 1605398559}
   dropChance: 100
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!58 &1605398565
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18397,6 +18408,8 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.53776026
+=======
+>>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 =======
 >>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
 --- !u!1 &1622394793
@@ -22873,7 +22886,10 @@ SceneRoots:
   - {fileID: 294028977}
   - {fileID: 1605398563}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
   - {fileID: 8621596062749752709}
   - {fileID: 1666360746}
 >>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
@@ -22891,4 +22907,7 @@ SceneRoots:
 <<<<<<< HEAD
 =======
   - {fileID: 1565281736}
+<<<<<<< HEAD
+>>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
+=======
 >>>>>>> parent of 90fd8cc (Boss Bits + 3rd Enemy)
