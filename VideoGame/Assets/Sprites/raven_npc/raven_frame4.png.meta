@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      raven_frame4_0: -6882447705417597565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

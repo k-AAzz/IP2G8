@@ -17,11 +17,17 @@ public class PlayerWeapons : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
-        {         
+        {
+            
             collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-            collision.gameObject.GetComponent<FlyingEnemy>().TakeDamage(damage);
+            
         }
 
+        if (collision.gameObject.CompareTag("Enemy2")) 
+        {
+            collision.gameObject.GetComponent<FlyingEnemy>().TakeDamage(damage);
+        }
+            
     }
 
     private void Update()
