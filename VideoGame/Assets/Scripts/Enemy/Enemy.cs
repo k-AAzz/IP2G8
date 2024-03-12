@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public float health = 100;
     bool isDead = false;
     public GameObject me;
+    public GameObject player;
+    public int damage = 1;
 
     [Header("Enemy Drop's")]
     public Sprite[] enemyDrop;
@@ -74,6 +76,21 @@ public class Enemy : MonoBehaviour
             //Attach 2d collider with trigger so it can be interacted with
             BoxCollider2D collider = newItem.AddComponent<BoxCollider2D>();
             collider.isTrigger = true;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            var player = other.gameObject.GetComponent<PlayerHealth>();
+
+            if (player)
+            {
+                player.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
         }
     }
 
