@@ -68,7 +68,7 @@ public class ItemChooser : MonoBehaviour
             //Create the item above the pedastool
             GameObject newItem = new GameObject("NewItem");
 
-            Vector3 offset = new Vector3(0, 1.4f, 0);
+            Vector3 offset = new Vector3(0, 1.3f, 0);
 
             newItem.transform.position = spawnLocation.transform.position;
             newItem.transform.position += offset;
@@ -84,6 +84,7 @@ public class ItemChooser : MonoBehaviour
 
             //Attach item script to the object and run internal function
             Item item = newItem.AddComponent<Item>();
+            ItemHover itemHover = newItem.AddComponent<ItemHover>();
             item.InitializeItem(chosenItem, itemsArray);
 
             //Attach 2d collider with trigger so it can be interacted with
