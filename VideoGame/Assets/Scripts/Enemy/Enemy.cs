@@ -38,6 +38,11 @@ public class Enemy : MonoBehaviour
         {
             Destroy(me);
         }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            health -= 25;
+        }
     }
 
     void SpawnDrop(Sprite[] itemsArray)

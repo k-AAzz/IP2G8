@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a7d2c60163730f4692d3f563d013b4c
+guid: 25f1c2360d79d0a43b696e387c709450
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1803689032268042357
-    second: ItemPedastool_0
+      213: -4067439357916110472
+    second: bootsOfSwitfness_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ItemPedastool_0
+      name: bootsOfSwitfness_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 38
+        x: 3
+        y: 27
+        width: 392
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 570da955e9df70910800000000000000
-      internalID: 1803689032268042357
+      spriteID: 871a7f5447d8d87c0800000000000000
+      internalID: -4067439357916110472
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ItemPedastool_0: 1803689032268042357
+      bootsOfSwitfness_0: -4067439357916110472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

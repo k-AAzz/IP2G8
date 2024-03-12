@@ -60,6 +60,11 @@ public class FlyingEnemy : MonoBehaviour
         {
             Destroy(me);
         }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            health -= 25;
+        }
     }
 
     void ChasePlayer()

@@ -31,39 +31,92 @@ public class Item : MonoBehaviour
         {
             switch (chosenItem.name)
             {
-                case "boots_item":
+
+                //Common Items
+
+                case "bootsOfSwiftness":
                     //Boots Action
                     PlayerControls playerControls = other.GetComponent<PlayerControls>();
                     playerControls.StatboostSpeed();
 
                     itemName = "Boots of Swiftness";
                     description = "Gives the player a bonus movespeed of 10%";
-                    rarity = "rare";
+                    rarity = "common";
 
                     Debug.Log("Bonus MoveSpeed!");
                 break;
 
-                case "heart_item_0":
+                case "gauntletsOfStrength":
                     //Health Action
                     PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
                     playerHealth.MaxHealthIncrease();
 
-                    itemName = "Heart Crystal";
+                    itemName = "Gauntlet's Of Strength";
                     description = "Grants a bonus Heart Container";
-                    rarity = "epic";
+                    rarity = "common";
 
                     Debug.Log("Bonus Health!");
                 break;
 
-                case "ring_item":
+                case "steelCapBoots":
                     //Ring Action
 
-                    itemName = "Amulet of Vitality";
+                    itemName = "Steelcap Boots";
                     description = "Gives the player a bonus movespeed of 10%";
-                    rarity = "blessed";
+                    rarity = "common";
 
                     Debug.Log("Amulet of Vitality!");
                     break;
+
+                case "charmOfFortune":
+                    //Ring Action
+
+                    itemName = "Charm Of Fortune";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "common";
+
+                    Debug.Log("Amulet of Vitality!");
+                    break;
+
+                //Rare Items
+
+                case "frozenSphere":
+                    //Ring Action
+
+                    itemName = "Frozen Sphere";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "rare";
+
+                    Debug.Log("Amulet of Vitality!");
+                    break;
+
+                case "teatheredHearts":
+                    //Ring Action
+
+                    itemName = "Teathered Hearts";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "rare";
+
+                    Debug.Log("Amulet of Vitality!");
+                    break;
+
+                //Epic Items
+
+                case "Amulet Of Ascendence":
+                    //Ring Action
+
+                    itemName = "Frozen Sphere";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "epic";
+
+                    Debug.Log("Amulet of Vitality!");
+                    break;
+
+                //Legendary Items
+
+                //Blessed Items
+
+
 
 
                 //Default Action

@@ -68,7 +68,7 @@ public class ItemChooser : MonoBehaviour
             //Create the item above the pedastool
             GameObject newItem = new GameObject("NewItem");
 
-            Vector3 offset = new Vector3(0, 0.8f, 0);
+            Vector3 offset = new Vector3(0, 1.4f, 0);
 
             newItem.transform.position = spawnLocation.transform.position;
             newItem.transform.position += offset;
@@ -79,7 +79,7 @@ public class ItemChooser : MonoBehaviour
             spriteRenderer.sortingOrder = 2;
 
             //Change the scale of the sprite / My references are too small can be removed later on
-            float scaleMultiplier = 2f;
+            float scaleMultiplier = 0.35f;
             newItem.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1.0f);
 
             //Attach item script to the object and run internal function
