@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public float health = 100;
     bool isDead = false;
     public GameObject me;
+    public GameObject player;
+    public int damage = 1;
 
     [Header("Enemy Drop's")]
     public Sprite[] enemyDrop;
@@ -35,6 +37,11 @@ public class Enemy : MonoBehaviour
         if (isDead == true)
         {
             Destroy(me);
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            health -= 25;
         }
     }
 
@@ -73,7 +80,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage = 35) //Take damage function
+    public void TakeDamage(int damage) //Take damage function
     {
         health -= damage;
 

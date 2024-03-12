@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ef9393eb121ff741856548d6616a583
+guid: 2d3102ca218c77f488cb019936bb6f80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4004708080983207187
-    second: Ring_0
+      213: 8578459552792198949
+    second: enduringVigor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ring_0
+      name: enduringVigor_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 54
-        height: 60
+        x: 9
+        y: 21
+        width: 416
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31de32428c4939730800000000000000
-      internalID: 4004708080983207187
+      spriteID: 52f3c3c338fcc0770800000000000000
+      internalID: 8578459552792198949
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ring_0: 4004708080983207187
+      enduringVigor_0: 8578459552792198949
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a7d2c60163730f4692d3f563d013b4c
+guid: 69674cad7d16be44fa393c3a2d8c193c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1803689032268042357
-    second: ItemPedastool_0
+      213: 7207404272836333613
+    second: amuletOfAscendence_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ItemPedastool_0
+      name: amuletOfAscendence_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 38
+        x: 24
+        y: 15
+        width: 348
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 570da955e9df70910800000000000000
-      internalID: 1803689032268042357
+      spriteID: d20da0beff7d50460800000000000000
+      internalID: 7207404272836333613
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ItemPedastool_0: 1803689032268042357
+      amuletOfAscendence_0: 7207404272836333613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
