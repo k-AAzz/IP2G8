@@ -6772,6 +6772,8 @@ MonoBehaviour:
   target: {fileID: 1891179966}
   health: 100
   me: {fileID: 294028973}
+  player: {fileID: 0}
+  damage: 1
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
   - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
@@ -11998,7 +12000,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.59, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -12046,7 +12048,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3a7d2c60163730f4692d3f563d013b4c, type: 3}
+  m_Sprite: {fileID: -5405142873708874844, guid: 6e1399652c1384d4398d2f9eacfb0e2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12070,12 +12072,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commonItems:
-  - {fileID: 21300000, guid: f1d0571a0c001d94988ae0370c2eb7d8, type: 3}
-  - {fileID: 21300000, guid: 5ef9393eb121ff741856548d6616a583, type: 3}
-  rareItems: []
-  epicItems: []
-  legendaryItems:
-  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
+  - {fileID: 21300000, guid: 25f1c2360d79d0a43b696e387c709450, type: 3}
+  - {fileID: 21300000, guid: d462381e3a0da5e47a6ab405f9b6706c, type: 3}
+  - {fileID: 21300000, guid: 95708d6c1ace8b64c95b94b1c74be904, type: 3}
+  - {fileID: 21300000, guid: 5252315d9585c0c43a8c0fb309ef1917, type: 3}
+  - {fileID: 21300000, guid: 41041c99f02667a4284820e81029cbed, type: 3}
+  rareItems:
+  - {fileID: 21300000, guid: ed348e1f1c1096a4c82fde042e04f155, type: 3}
+  - {fileID: 21300000, guid: a6a118d2e6cd31643bfc830773379645, type: 3}
+  epicItems:
+  - {fileID: 21300000, guid: 69674cad7d16be44fa393c3a2d8c193c, type: 3}
+  - {fileID: 0}
+  legendaryItems: []
   spawnLocation: {fileID: 843010102}
   player: {fileID: 617387924}
   healthBar: {fileID: 1238109333}
@@ -20505,7 +20513,7 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 05e5363e51b358d44a4f7e90fcce33a0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7f1341c620724d1408a210cf479ec4e6, type: 2}
 --- !u!4 &1871369424
 Transform:
   m_ObjectHideFlags: 0
