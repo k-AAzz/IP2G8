@@ -51,14 +51,18 @@ public class EnemyItem : MonoBehaviour
             switch (chosenItem.name)
             {
                 case "gems_0":
-                    //Gems Item
-                    Debug.Log("You Picked Up Gems");
+
+                    //Gems Action
                     gameManager.AddGems(1);
+
                     break;
 
                 case "heart_full_0":
-                    //Heart Item
-                    Debug.Log("You Picked Up a Heart");
+
+                    //Heart Action
+                    HealthSystem healthSystem = FindFirstObjectByType<HealthSystem>();
+                    healthSystem.Heal(1);
+
                     break;
 
                 //Default Action
