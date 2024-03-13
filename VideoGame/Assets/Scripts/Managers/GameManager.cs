@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public int gemCount = 0;
     public TextMeshProUGUI gemCountText;
 
+    [Header("Global References")]
+    public float enemyDropChance = 40f;
+
     void Start()
     {
         gemCountText.text = gemCount.ToString();
@@ -29,5 +32,10 @@ public class GameManager : MonoBehaviour
     private void UpdateGemCountText()
     {
         gemCountText.text = gemCount.ToString();
+    }
+
+    public void ItemIncreaseDropRate()
+    {
+        enemyDropChance = (float)(enemyDropChance * 1.3);
     }
 }

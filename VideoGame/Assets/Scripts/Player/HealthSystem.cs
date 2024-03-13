@@ -109,7 +109,19 @@ public class HealthSystem : MonoBehaviour
         heartInstance.transform.SetAsLastSibling();
 
         heartObjects.Add(heartInstance);
+
         UpdateHeartsUI();
+
+        if (hasShield)
+        {
+            foreach (GameObject shieldObj in GameObject.FindGameObjectsWithTag("Shield"))
+            {
+                if (shieldObj != null)
+                {
+                    shieldObj.transform.SetAsLastSibling();
+                }
+            }
+        }
     }
 
     public void ItemShieldAdd()

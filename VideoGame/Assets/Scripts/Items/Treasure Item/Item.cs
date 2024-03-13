@@ -58,8 +58,7 @@ public class Item : MonoBehaviour
                     //Gauntlets Action
                     PlayerWeapons playerWeapons = FindFirstObjectByType<PlayerWeapons>();
                     playerWeapons.ItemDamageIncrease();
-
-
+               
                     //Gauntlets Description
                     itemName = "Gauntlets Of Strength";
                     description = "Increases Base Damage";
@@ -96,6 +95,8 @@ public class Item : MonoBehaviour
                 case "charmOfFortune":
 
                     //Charm Action
+                    GameManager dropRateIncrease = FindFirstObjectByType<GameManager>();
+                    dropRateIncrease.ItemIncreaseDropRate();
 
                     //Charm Description
                     itemName = "Charm Of Fortune";

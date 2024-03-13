@@ -8,6 +8,7 @@ public class DebugMenu : MonoBehaviour
     private HealthSystem healthSystem;
     private PlayerAttack playerAttack;
     private PlayerWeapons playerWeapons;
+    private GameManager gameManager;
     private bool isDebugVisible = true;
     private float debugMenuYOffset = 130f;
 
@@ -17,6 +18,7 @@ public class DebugMenu : MonoBehaviour
         healthSystem = FindFirstObjectByType<HealthSystem>();
         playerAttack = FindFirstObjectByType<PlayerAttack>();
         playerWeapons = FindFirstObjectByType<PlayerWeapons>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     void Update()
@@ -44,6 +46,9 @@ public class DebugMenu : MonoBehaviour
             GUI.Label(new Rect(10, yPosition, 200, 20), "MOVESPEED: " + playerControls.moveSpeed.ToString()); yPosition += 20;
             GUI.Label(new Rect(10, yPosition, 200, 20), "DAMAGE: " + playerWeapons.damage.ToString());  yPosition += 20;
             GUI.Label(new Rect(10, yPosition, 200, 20), "ATTACK SPD: " + playerAttack.timeToAttack.ToString()); yPosition += 20;
+            yPosition += 20;
+            GUI.Label(new Rect(10, yPosition, 200, 20), "ENEMY DROPRATE: " + gameManager.enemyDropChance.ToString()); yPosition += 20;
+
         }
     }
 }

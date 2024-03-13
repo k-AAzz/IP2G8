@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,8 +28,9 @@ public class FlyingEnemy : MonoBehaviour
     [Header("Enemy Drop's")]
     public Sprite[] enemyDrop;
     public GameObject spawnLocation;
-    public int dropChance = 100;
     public int damage = 1;
+
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +38,9 @@ public class FlyingEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -117,18 +120,19 @@ public class FlyingEnemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage) //Take damage function
+    public void TakeDamage(float damage) // Take damage function
     {
         health -= damage;
 
         if (health <= 0)
         {
-            isDead = true; //If health is less than 0, enemy is dead
+            isDead = true; // If health is less than or equal to 0, the enemy is dead
 
-            //Percentage Chance for a drop from an enemy
-            int randomValue = UnityEngine.Random.Range(0, 100);
+            // Retrieve the drop chance from the GameManager
+            float dropChance = gameManager.enemyDropChance;
 
-            if (randomValue <= dropChance)
+            // Check if a drop occurs based on the drop chance
+            if (Random.value * 100 <= dropChance)
             {
                 SpawnDrop(enemyDrop);
             }
@@ -144,5 +148,4 @@ public class FlyingEnemy : MonoBehaviour
             GUI.Label(new Rect(screenPosition.x, Screen.height - screenPosition.y, 100, 20), "HP: " + health);
         }
     }
-
 }
