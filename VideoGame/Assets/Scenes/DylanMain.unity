@@ -6292,7 +6292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338c8691b6d53b348ac7de3a5be76131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 35
+  damage: 2.5
   enemy: {fileID: 294028975}
   flyingEnemy: {fileID: 1605398564}
   weaponType: 0
@@ -6729,9 +6729,9 @@ GameObject:
   m_Component:
   - component: {fileID: 294028977}
   - component: {fileID: 294028976}
-  - component: {fileID: 294028975}
   - component: {fileID: 294028974}
   - component: {fileID: 294028978}
+  - component: {fileID: 294028975}
   m_Layer: 0
   m_Name: Walker
   m_TagString: Enemy
@@ -6774,13 +6774,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1891179966}
-  health: 100
+  health: 10
   me: {fileID: 294028973}
   player: {fileID: 0}
   damage: 1
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
-  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
+  - {fileID: -1218823883695198015, guid: f39d4f59631388e42918418f9ced7e4d, type: 3}
   spawnLocation: {fileID: 294028973}
   dropChance: 100
 --- !u!212 &294028976
@@ -36417,8 +36417,8 @@ GameObject:
   - component: {fileID: 1605398563}
   - component: {fileID: 1605398562}
   - component: {fileID: 1605398560}
-  - component: {fileID: 1605398564}
   - component: {fileID: 1605398565}
+  - component: {fileID: 1605398564}
   m_Layer: 0
   m_Name: Fly-guy
   m_TagString: Enemy2
@@ -36537,11 +36537,11 @@ MonoBehaviour:
   playerInAttackRange: 1
   bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
   bulletPos: {fileID: 1605398563}
-  health: 100
+  health: 10
   me: {fileID: 1605398559}
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
-  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
+  - {fileID: -1218823883695198015, guid: f39d4f59631388e42918418f9ced7e4d, type: 3}
   spawnLocation: {fileID: 1605398559}
   dropChance: 100
   damage: 1
@@ -42220,6 +42220,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1726415395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726415396}
+  m_Layer: 0
+  m_Name: ---------- Debug Menu ----------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1726415396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726415395}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.14, y: -12.51, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733326175
 GameObject:
   m_ObjectHideFlags: 0
@@ -43226,6 +43257,50 @@ Transform:
   - {fileID: 2075923396}
   m_Father: {fileID: 842829948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1888429887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888429889}
+  - component: {fileID: 1888429888}
+  m_Layer: 0
+  m_Name: Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1888429888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888429887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230f379134a1fa0419a45100a4d46eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1888429889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888429887}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.14, y: -12.51, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1891179966 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3987576619734303348, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
@@ -44157,7 +44232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2017087179
 Transform:
   m_ObjectHideFlags: 0
@@ -44660,8 +44735,8 @@ GameObject:
   - component: {fileID: 2046412791}
   - component: {fileID: 2046412790}
   - component: {fileID: 2046412789}
-  - component: {fileID: 2046412788}
   - component: {fileID: 2046412787}
+  - component: {fileID: 2046412788}
   m_Layer: 0
   m_Name: Ranger
   m_TagString: Enemy2
@@ -44725,11 +44800,11 @@ MonoBehaviour:
   playerInAttackRange: 1
   bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
   bulletPos: {fileID: 2046412791}
-  health: 100
+  health: 10
   me: {fileID: 2046412786}
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
-  - {fileID: -7287130390604309405, guid: 643435161136b1a46baaaa131881c8f5, type: 3}
+  - {fileID: -1218823883695198015, guid: f39d4f59631388e42918418f9ced7e4d, type: 3}
   spawnLocation: {fileID: 2046412786}
   dropChance: 100
   damage: 1
@@ -45701,5 +45776,7 @@ SceneRoots:
   - {fileID: 1003952232}
   - {fileID: 583297193}
   - {fileID: 516185941}
+  - {fileID: 1726415396}
+  - {fileID: 1888429889}
   - {fileID: 948624580}
   - {fileID: 100653108}
