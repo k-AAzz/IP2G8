@@ -57,10 +57,8 @@ public class Item : MonoBehaviour
 
                     //Gauntlets Action
                     PlayerWeapons playerWeapons = FindFirstObjectByType<PlayerWeapons>();
-                    if (playerWeapons != null)
-                    {
-                        playerWeapons.ItemDamageIncrease();
-                    }
+                    playerWeapons.ItemDamageIncrease();
+
 
                     //Gauntlets Description
                     itemName = "Gauntlets Of Strength";
@@ -73,10 +71,7 @@ public class Item : MonoBehaviour
 
                     //Amulet Action
                     HealthSystem healthSystem = FindFirstObjectByType<HealthSystem>();
-                    if(healthSystem != null)
-                    {
-                        healthSystem.ItemHealthIncrease();
-                    }
+                    healthSystem.ItemHealthIncrease();
 
                     //Amulet Description
                     itemName = "Amulet of Vitality";
@@ -88,6 +83,8 @@ public class Item : MonoBehaviour
                 case "steelCapBoots":
 
                     //Boots Action
+                    HealthSystem shieldSystem = FindFirstObjectByType<HealthSystem>();
+                    shieldSystem.ItemShieldAdd();
 
                     //Boots Description
                     itemName = "Steelcap Boots";

@@ -7,17 +7,21 @@ public class HealthSystem : MonoBehaviour
     [Header("Main References")]
     public GameObject heartPrefab;
     public Transform heartsParent;
+    public GameObject shieldPrefab;
 
     [Header("Sprite References")]
     public Sprite fullHeartSprite;
     public Sprite halfHeartSprite;
     public Sprite emptyHeartSprite;
+    public Sprite shieldSprite;
 
     [Header("Variables")]
     public int maxHealth = 6;
     public int currentHealth;
     public bool isDead;
+    public bool hasShield = false;
     private List<GameObject> heartObjects = new List<GameObject>();
+    private GameObject shieldObject;
 
     void Start()
     {
@@ -31,7 +35,6 @@ public class HealthSystem : MonoBehaviour
         if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
-
             Destroy(gameObject);
         }
     }
@@ -47,6 +50,13 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (hasShield)
+        {
+            hasShield = false;
+            Destroy(shieldObject);
+            return;
+        }
+
         currentHealth -= amount;
         if (currentHealth < 0)
             currentHealth = 0;
@@ -102,4 +112,11 @@ public class HealthSystem : MonoBehaviour
         UpdateHeartsUI();
     }
 
+    public void ItemShieldAdd()
+    {
+        hasShield = true;
+        shieldObject = Instantiate(shieldPrefab, heartsParent);
+        shieldObject.GetComponent<Image>().sprite = shieldSprite;
+        shieldObject.transform.SetAsLastSibling();
+    }
 }
