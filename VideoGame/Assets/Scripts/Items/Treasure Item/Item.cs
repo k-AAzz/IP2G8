@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     [Header("Passed In Variables")]
     private Sprite chosenItem;
     private Sprite[] itemsArray;
+    private GameObject particlesObject; // Reference to the particles object
 
     [Header("Sending Variables")]
     public string itemName;
@@ -23,6 +24,11 @@ public class Item : MonoBehaviour
     {
         this.chosenItem = chosenItem;
         this.itemsArray = itemsArray;
+    }
+
+    public void SetParticles(GameObject particles)
+    {
+        particlesObject = particles;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -140,8 +146,10 @@ public class Item : MonoBehaviour
                     Debug.LogWarning("Nothing Assigned: " + chosenItem.name);
                     break;
             }
+
             //Destroy object after collision with player
             Destroy(gameObject);
+            Destroy(particlesObject);
             itemDisplay.ItemDisplay(itemName, description, rarity);
         }
     }

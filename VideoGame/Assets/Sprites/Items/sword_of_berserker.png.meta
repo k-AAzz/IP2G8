@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sword_of_berserker_0: 1317437765593342348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
