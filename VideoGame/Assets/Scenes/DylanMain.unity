@@ -6732,6 +6732,7 @@ GameObject:
   - component: {fileID: 294028974}
   - component: {fileID: 294028978}
   - component: {fileID: 294028975}
+  - component: {fileID: 294028979}
   m_Layer: 0
   m_Name: Walker
   m_TagString: Enemy
@@ -6890,6 +6891,28 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.5125189, y: 0.12798966}
   m_Radius: 1.0656781
+--- !u!95 &294028979
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294028973}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19580d561d84f9741b2468187083a4ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &306136433
 GameObject:
   m_ObjectHideFlags: 0
@@ -19094,6 +19117,7 @@ MonoBehaviour:
   emptyHeartSprite: {fileID: -511133062249068954, guid: 7eb91f6f2301b7a4dafa07c3fe16f3c0, type: 3}
   maxHealth: 6
   currentHealth: 0
+  isDead: 0
 --- !u!1 &1918071280
 GameObject:
   m_ObjectHideFlags: 0
