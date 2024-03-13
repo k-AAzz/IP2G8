@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class PlayerWeapons : MonoBehaviour
@@ -40,4 +41,14 @@ public class PlayerWeapons : MonoBehaviour
         }
     }
 
+    //Item Functions
+    public void ItemDamageIncrease()
+    {
+        // Access variables and modify them
+        PlayerWeapons playerWeapon = FindFirstObjectByType<PlayerWeapons>();
+        if (playerWeapon != null)
+        {
+            playerWeapon.damage = (float)(damage * 1.3);
+        }
+    }
 }

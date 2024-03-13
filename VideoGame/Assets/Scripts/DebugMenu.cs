@@ -5,7 +5,7 @@ using UnityEngine;
 public class DebugMenu : MonoBehaviour
 {
     private PlayerControls playerControls;
-    private PlayerHealth playerHealth;
+    private HealthSystem healthSystem;
     private PlayerAttack playerAttack;
     private PlayerWeapons playerWeapons;
     private bool isDebugVisible = true;
@@ -14,7 +14,7 @@ public class DebugMenu : MonoBehaviour
     void Start()
     {
         playerControls = FindFirstObjectByType<PlayerControls>();
-        playerHealth = FindFirstObjectByType<PlayerHealth>();
+        healthSystem = FindFirstObjectByType<HealthSystem>();
         playerAttack = FindFirstObjectByType<PlayerAttack>();
         playerWeapons = FindFirstObjectByType<PlayerWeapons>();
     }
@@ -37,7 +37,10 @@ public class DebugMenu : MonoBehaviour
 
             //Draw the debug menu entries with dynamic Y position
             GUI.Label(new Rect(10, yPosition, 200, 20), "DEBUG MENU (F1 TOGGLE)"); yPosition += 20;
-            GUI.Label(new Rect(10, yPosition, 200, 20), "HEALTH: " + playerHealth.health.ToString()); yPosition += 20;
+            yPosition += 20;
+            GUI.Label(new Rect(10, yPosition, 200, 20), "HEALTH: " + healthSystem.currentHealth.ToString()); yPosition += 20;
+            GUI.Label(new Rect(10, yPosition, 200, 20), "MAX HEALTH: " + healthSystem.maxHealth.ToString()); yPosition += 20;
+            yPosition += 20;
             GUI.Label(new Rect(10, yPosition, 200, 20), "MOVESPEED: " + playerControls.moveSpeed.ToString()); yPosition += 20;
             GUI.Label(new Rect(10, yPosition, 200, 20), "DAMAGE: " + playerWeapons.damage.ToString());  yPosition += 20;
             GUI.Label(new Rect(10, yPosition, 200, 20), "ATTACK SPD: " + playerAttack.timeToAttack.ToString()); yPosition += 20;

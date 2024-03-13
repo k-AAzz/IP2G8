@@ -86,7 +86,7 @@ public class ItemChooser : MonoBehaviour
             newItem.transform.position = spawnLocation.transform.position;
             newItem.transform.position += offset;
 
-            // Instantiate particles behind the item
+            //Create particles behind the item
             GameObject particles = Instantiate(particlesPrefab, newItem.transform.position, Quaternion.identity);
 
             //Add a sprite renderer with values
@@ -107,8 +107,6 @@ public class ItemChooser : MonoBehaviour
             //Attach 2d collider with trigger so it can be interacted with
             BoxCollider2D collider = newItem.AddComponent<BoxCollider2D>();
             collider.isTrigger = true;
-
-
 
             //Debug log item
             Debug.Log("Item: " + chosenItem.name);

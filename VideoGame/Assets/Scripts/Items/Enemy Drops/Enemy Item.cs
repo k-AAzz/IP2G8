@@ -34,7 +34,7 @@ public class EnemyItem : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        // Calculate the direction to move towards the player
+        //Calculate the direction to move towards the player
         Vector3 direction = player.position - transform.position;
         direction.Normalize();
 

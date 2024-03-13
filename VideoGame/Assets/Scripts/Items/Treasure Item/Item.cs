@@ -44,7 +44,7 @@ public class Item : MonoBehaviour
 
                     //Boots Action
                     PlayerControls playerControls = other.GetComponent<PlayerControls>();
-                    playerControls.StatboostSpeed();
+                    playerControls.ItemSpeedIncrease();
 
                     //Boots Description
                     itemName = "Boots of Swiftness";
@@ -56,11 +56,15 @@ public class Item : MonoBehaviour
                 case "gauntletsOfStrength":
 
                     //Gauntlets Action
-
+                    PlayerWeapons playerWeapons = FindFirstObjectByType<PlayerWeapons>();
+                    if (playerWeapons != null)
+                    {
+                        playerWeapons.ItemDamageIncrease();
+                    }
 
                     //Gauntlets Description
-                    itemName = "Gauntlet's Of Strength";
-                    description = "Grants a bonus Heart Container";
+                    itemName = "Gauntlets Of Strength";
+                    description = "Increases Base Damage";
                     rarity = "common";
 
                     break;
@@ -68,8 +72,11 @@ public class Item : MonoBehaviour
                 case "amuletOfVitality":
 
                     //Amulet Action
-                    PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-                    playerHealth.MaxHealthIncrease();
+                    HealthSystem healthSystem = FindFirstObjectByType<HealthSystem>();
+                    if(healthSystem != null)
+                    {
+                        healthSystem.ItemHealthIncrease();
+                    }
 
                     //Amulet Description
                     itemName = "Amulet of Vitality";

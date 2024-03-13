@@ -45,7 +45,8 @@ public class PlayerControls : MonoBehaviour
 
     }
 
-    public void StatboostSpeed()
+    //Item Functions
+    public void ItemSpeedIncrease()
     {
         moveSpeed = moveSpeed + 2;
     }
