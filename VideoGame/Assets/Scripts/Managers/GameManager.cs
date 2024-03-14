@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Player Statuses")]
     public bool frozenSphere = false;
-    public float frozenMultiplier = 12.5f;
+    public float frozenMultiplier = 0.125f;
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void ItemFrozenActive()
     {
-        if (!frozenSphere)
+        if (frozenSphere == false)
         {
             frozenSphere = true;
         }

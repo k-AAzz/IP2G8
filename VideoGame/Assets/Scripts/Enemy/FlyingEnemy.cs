@@ -7,6 +7,8 @@ public class FlyingEnemy : MonoBehaviour
 {
 
     [SerializeField] Transform target;
+    [SerializeField] float moveSpeed = 3.5f;
+    private float originalMoveSpeed;
 
     NavMeshAgent agent;
 
@@ -39,6 +41,9 @@ public class FlyingEnemy : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
+        agent.speed = moveSpeed;
+        originalMoveSpeed = moveSpeed;
+
 
         gameManager = FindFirstObjectByType<GameManager>();
     }
@@ -69,6 +74,8 @@ public class FlyingEnemy : MonoBehaviour
         {
             health -= 25;
         }
+
+        agent.speed = moveSpeed;
     }
 
     void ChasePlayer()
@@ -120,23 +127,39 @@ public class FlyingEnemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage) // Take damage function
+    public void TakeDamage(float damage)
     {
+        bool isFrozen = gameManager.frozenSphere;
+        if (isFrozen == true)
+        {
+            StartCoroutine(ApplyFreeze());
+        }
+
         health -= damage;
 
         if (health <= 0)
         {
-            isDead = true; // If health is less than or equal to 0, the enemy is dead
+            isDead = true;
 
-            // Retrieve the drop chance from the GameManager
             float dropChance = gameManager.enemyDropChance;
 
-            // Check if a drop occurs based on the drop chance
             if (Random.value * 100 <= dropChance)
             {
                 SpawnDrop(enemyDrop);
             }
         }
+    }
+
+    IEnumerator ApplyFreeze()
+    {
+        float frozenMultiplier = gameManager.frozenMultiplier;
+        float reductionAmount = moveSpeed * frozenMultiplier; 
+
+        moveSpeed -= reductionAmount; 
+
+        yield return new WaitForSeconds(3f);
+
+        moveSpeed += reductionAmount;
     }
 
     void OnGUI()
