@@ -5,26 +5,31 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-
+    [Header("Movement")]
     [SerializeField] Transform target;
     [SerializeField] float moveSpeed = 3.5f;
     private float originalMoveSpeed;
+    private NavMeshAgent agent;
 
-    NavMeshAgent agent;
-
+    [Header("Health")]
     public float health = 10;
-    bool isDead = false;
-    public GameObject me;
-    public GameObject player;
+    private bool isDead = false;
     public int damage = 1;
 
-    [Header("Enemy Drop's")]
+    [Header("Game Objects")]
+    public GameObject me;
+    public GameObject player;
+
+    [Header("Enemy Drops")]
     public Sprite[] enemyDrop;
     public GameObject spawnLocation;
 
+    [Header("References")]
     private GameManager gameManager;
+    private SpriteRenderer spriteRenderer;
+    private Material originalMaterial;
+    private GameObject frozenParticleInstance;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -35,14 +40,21 @@ public class Enemy : MonoBehaviour
         originalMoveSpeed = moveSpeed;
 
         gameManager = FindFirstObjectByType<GameManager>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        //Store the original material
+        if (spriteRenderer != null)
+        {
+            originalMaterial = spriteRenderer.material;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         agent.SetDestination(target.position);
 
-        if (isDead == true)
+        if (isDead)
         {
             Destroy(me);
         }
@@ -66,7 +78,7 @@ public class Enemy : MonoBehaviour
 
             Sprite chosenItem = itemsArray[randomIndex];
 
-            //Create the item above the pedastool
+            //Create the item above the pedestal
             GameObject newItem = new GameObject("EnemyDrop");
 
             newItem.transform.position = spawnLocation.transform.position;
@@ -84,7 +96,7 @@ public class Enemy : MonoBehaviour
             EnemyItem item = newItem.AddComponent<EnemyItem>();
             item.InitializeItem(chosenItem, itemsArray);
 
-            //Attach 2d collider with trigger so it can be interacted with
+            //Attach 2D collider with trigger so it can be interacted with
             BoxCollider2D collider = newItem.AddComponent<BoxCollider2D>();
             collider.isTrigger = true;
         }
@@ -93,7 +105,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         bool isFrozen = gameManager.frozenSphere;
-        if (isFrozen == true)
+        if (isFrozen)
         {
             StartCoroutine(ApplyFreeze());
         }
@@ -118,11 +130,35 @@ public class Enemy : MonoBehaviour
         float frozenMultiplier = gameManager.frozenMultiplier;
         float reductionAmount = moveSpeed * frozenMultiplier;
 
+        Material frozenMaterial = gameManager.frozenMaterial;
+
         moveSpeed -= reductionAmount;
+
+        GameObject frozenPrefab = gameManager.frozenParticle;
+
+        frozenParticleInstance = Instantiate(frozenPrefab, transform.position, Quaternion.identity, transform);
+
+        //Change the material
+        if (spriteRenderer != null && frozenMaterial != null)
+        {
+            spriteRenderer.material = frozenMaterial;
+        }
 
         yield return new WaitForSeconds(3f);
 
         moveSpeed += reductionAmount;
+
+        // Destroy frozen particle effect
+        if (frozenParticleInstance != null)
+        {
+            Destroy(frozenParticleInstance);
+        }
+
+        //Revert the material
+        if (spriteRenderer != null && originalMaterial != null)
+        {
+            spriteRenderer.material = originalMaterial;
+        }
     }
 
     void OnGUI()

@@ -5,36 +5,34 @@ using UnityEngine.AI;
 
 public class FlyingEnemy : MonoBehaviour
 {
-
+    [Header("Movement")]
     [SerializeField] Transform target;
     [SerializeField] float moveSpeed = 3.5f;
     private float originalMoveSpeed;
+    private NavMeshAgent agent;
 
-    NavMeshAgent agent;
-
+    [Header("Combat")]
     public float attackRange;
-
     public LayerMask whatIsPlayer;
-
-    public bool playerInAttackRange;
-
+    private bool playerInAttackRange;
     public GameObject bullet;
     public Transform bulletPos;
-
     private float timer;
 
+    [Header("Health")]
     public float health = 10f;
-    bool isDead = false;
+    private bool isDead = false;
     public GameObject me;
 
-    [Header("Enemy Drop's")]
+    [Header("Enemy Drops")]
     public Sprite[] enemyDrop;
     public GameObject spawnLocation;
     public int damage = 1;
 
+    [Header("References")]
     private GameManager gameManager;
+    private Material originalMaterial;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -44,11 +42,16 @@ public class FlyingEnemy : MonoBehaviour
         agent.speed = moveSpeed;
         originalMoveSpeed = moveSpeed;
 
-
         gameManager = FindFirstObjectByType<GameManager>();
+
+        //Store the original material
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            originalMaterial = spriteRenderer.material;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -60,12 +63,12 @@ public class FlyingEnemy : MonoBehaviour
             AttackPlayer();
             timer = 0;
         }
-        else if(!playerInAttackRange)
+        else if (!playerInAttackRange)
         {
             ChasePlayer();
         }
 
-        if(isDead == true)
+        if (isDead == true)
         {
             Destroy(me);
         }
@@ -103,7 +106,7 @@ public class FlyingEnemy : MonoBehaviour
 
             Sprite chosenItem = itemsArray[randomIndex];
 
-            //Create the item above the pedastool
+            //Create the item above the pedestal
             GameObject newItem = new GameObject("EnemyDrop");
 
             newItem.transform.position = spawnLocation.transform.position;
@@ -121,7 +124,7 @@ public class FlyingEnemy : MonoBehaviour
             EnemyItem item = newItem.AddComponent<EnemyItem>();
             item.InitializeItem(chosenItem, itemsArray);
 
-            //Attach 2d collider with trigger so it can be interacted with
+            //Attach 2D collider with trigger so it can be interacted with
             BoxCollider2D collider = newItem.AddComponent<BoxCollider2D>();
             collider.isTrigger = true;
         }
@@ -130,7 +133,7 @@ public class FlyingEnemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         bool isFrozen = gameManager.frozenSphere;
-        if (isFrozen == true)
+        if (isFrozen)
         {
             StartCoroutine(ApplyFreeze());
         }
@@ -153,13 +156,27 @@ public class FlyingEnemy : MonoBehaviour
     IEnumerator ApplyFreeze()
     {
         float frozenMultiplier = gameManager.frozenMultiplier;
-        float reductionAmount = moveSpeed * frozenMultiplier; 
+        float reductionAmount = moveSpeed * frozenMultiplier;
 
-        moveSpeed -= reductionAmount; 
+        moveSpeed -= reductionAmount;
+
+        //Change the material
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        Material frozenMaterial = gameManager.frozenMaterial;
+        if (spriteRenderer != null && frozenMaterial != null)
+        {
+            spriteRenderer.material = frozenMaterial;
+        }
 
         yield return new WaitForSeconds(3f);
 
         moveSpeed += reductionAmount;
+
+        //Revert the material
+        if (spriteRenderer != null && originalMaterial != null)
+        {
+            spriteRenderer.material = originalMaterial;
+        }
     }
 
     void OnGUI()
