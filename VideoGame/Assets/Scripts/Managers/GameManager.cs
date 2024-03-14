@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     [Header("Global References")]
     public float enemyDropChance = 40f;
 
+    [Header("Player Statuses")]
+    public bool frozenSphere = false;
+    public float frozenMultiplier = 12.5f;
+
     void Start()
     {
         gemCountText.text = gemCount.ToString();
@@ -37,5 +41,18 @@ public class GameManager : MonoBehaviour
     public void ItemIncreaseDropRate()
     {
         enemyDropChance = (float)(enemyDropChance * 1.3);
+    }
+
+    public void ItemFrozenActive()
+    {
+        if (!frozenSphere)
+        {
+            frozenSphere = true;
+        }
+
+        if(frozenSphere)
+        {
+            frozenMultiplier = (float)(frozenMultiplier * 1.3);
+        }
     }
 }
