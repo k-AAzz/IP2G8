@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour
     private Material originalMaterial;
     private GameObject frozenParticleInstance;
 
+    public bool enemyFrozen = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -105,6 +107,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         bool isFrozen = gameManager.frozenSphere;
+
         if (isFrozen)
         {
             StartCoroutine(ApplyFreeze());
@@ -127,6 +130,9 @@ public class Enemy : MonoBehaviour
 
     IEnumerator ApplyFreeze()
     {
+        if (enemyFrozen)
+            yield break;
+
         float frozenMultiplier = gameManager.frozenMultiplier;
         float reductionAmount = moveSpeed * frozenMultiplier;
 
@@ -144,15 +150,14 @@ public class Enemy : MonoBehaviour
             spriteRenderer.material = frozenMaterial;
         }
 
+        enemyFrozen = true;
+
         yield return new WaitForSeconds(3f);
 
         moveSpeed += reductionAmount;
 
-        // Destroy frozen particle effect
-        if (frozenParticleInstance != null)
-        {
-            Destroy(frozenParticleInstance);
-        }
+        enemyFrozen = false;
+        Destroy(frozenParticleInstance);
 
         //Revert the material
         if (spriteRenderer != null && originalMaterial != null)
