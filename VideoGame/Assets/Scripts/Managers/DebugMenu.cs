@@ -48,6 +48,9 @@ public class DebugMenu : MonoBehaviour
             GUI.Label(new Rect(10, yPosition, 200, 20), "ATTACK SPD: " + playerAttack.timeToAttack.ToString()); yPosition += 20;
             yPosition += 20;
             GUI.Label(new Rect(10, yPosition, 200, 20), "ENEMY DROPRATE: " + gameManager.enemyDropChance.ToString()); yPosition += 20;
+            yPosition += 20;
+            GUI.Label(new Rect(10, yPosition, 200, 20), "ENEMY DROPRATE: " + gameManager.frozenSphere.ToString()); yPosition += 20;
+            GUI.Label(new Rect(10, yPosition, 200, 20), "ENEMY DROPRATE: " + gameManager.frozenMultiplier.ToString()); yPosition += 20;
 
         }
     }

@@ -108,8 +108,12 @@ public class Item : MonoBehaviour
                 //Rare Items
 
                 case "frozenSphere":
-                    //Ring Action
 
+                    //Frozen Action
+                    GameManager frozenSphere = FindFirstObjectByType<GameManager>();
+                    frozenSphere.ItemFrozenActive();
+
+                    //Frozen Description
                     itemName = "Frozen Sphere";
                     description = "Gives the player a bonus movespeed of 10%";
                     rarity = "rare";
