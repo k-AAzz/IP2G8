@@ -70,7 +70,7 @@ public class StabState : State
     public override State RunCurrentState()
     {
         stab();
-        if(stabdone)
+        if(stabdone == true)
         {
             return IdleState;
         }
