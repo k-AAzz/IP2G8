@@ -5307,7 +5307,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5450,7 +5450,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5536,7 +5536,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5696,7 +5696,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1245536511
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 1324554861070464549, guid: 59349878742b033428d3666c0d9e2769, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5726,6 +5726,85 @@ MonoBehaviour:
   flyingEnemy: {fileID: 9123217272111812978}
   weaponType: 0
   bulletLife: 2
+--- !u!1 &245283391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 245283392}
+  - component: {fileID: 245283393}
+  m_Layer: 0
+  m_Name: ItemChooser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245283392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245283391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 843010103}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245283393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245283391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d260f72e2dd78a146ba3775ac8f8472f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commonItems:
+  - {fileID: 21300000, guid: 25f1c2360d79d0a43b696e387c709450, type: 3}
+  - {fileID: 21300000, guid: 95708d6c1ace8b64c95b94b1c74be904, type: 3}
+  - {fileID: 21300000, guid: 42a28dfc9ede04848904b8262156b9fb, type: 3}
+  - {fileID: 21300000, guid: 8d447cd88d4f9fb4eb754540d4f0b526, type: 3}
+  - {fileID: 21300000, guid: d462381e3a0da5e47a6ab405f9b6706c, type: 3}
+  - {fileID: 21300000, guid: 41041c99f02667a4284820e81029cbed, type: 3}
+  - {fileID: 21300000, guid: 84de6428a1f20d147a0b8b8d936be151, type: 3}
+  - {fileID: 21300000, guid: 5252315d9585c0c43a8c0fb309ef1917, type: 3}
+  rareItems:
+  - {fileID: 21300000, guid: ed348e1f1c1096a4c82fde042e04f155, type: 3}
+  - {fileID: 21300000, guid: a6a118d2e6cd31643bfc830773379645, type: 3}
+  - {fileID: 21300000, guid: e6e7fc36ff4b26043830bf4334f9de3e, type: 3}
+  - {fileID: 21300000, guid: 9715c9808a4f0ab47bb752cc446d0789, type: 3}
+  epicItems:
+  - {fileID: 21300000, guid: 23ac2927b7eed274fb417d90b9a071ba, type: 3}
+  - {fileID: 21300000, guid: 69674cad7d16be44fa393c3a2d8c193c, type: 3}
+  legendaryItems:
+  - {fileID: 21300000, guid: 0541f678f7264ac4fa5237a636c356aa, type: 3}
+  blessedItems:
+  - {fileID: 21300000, guid: c4f0eee322f8ddf41bda1a61fd415a55, type: 3}
+  - {fileID: 21300000, guid: 2d3102ca218c77f488cb019936bb6f80, type: 3}
+  - {fileID: 21300000, guid: 0c1ebf0ad481ba342be1353d08a6d96e, type: 3}
+  - {fileID: 21300000, guid: 7fc63df25e7b1464ea34462038f46c27, type: 3}
+  - {fileID: 21300000, guid: 0d1108898352b934d80884553420de40, type: 3}
+  commonParticle: {fileID: 9009480852220273377, guid: 6af1720bf565f6648b2c60cf4c8902fa, type: 3}
+  rareParticle: {fileID: 6951328049468259045, guid: 39128b8a316ff46499439dabf2ffea93, type: 3}
+  epicParticle: {fileID: 3904248023956423606, guid: 86783cec9692a2943816c33d845860fe, type: 3}
+  legendaryParticle: {fileID: 6369698034353980005, guid: b61fc96836de84d4b979a5d3e62b7e6e, type: 3}
+  blessedParticle: {fileID: 8918141962667883638, guid: 4fd306b040da32b429586a14c72447d1, type: 3}
+  spawnLocation: {fileID: 843010102}
+  player: {fileID: 617387924}
+  healthBar: {fileID: 0}
+  isBlessed: 1
+  itemChooserDestroy: 0
 --- !u!1 &252065009
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,7 +6337,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6344,7 +6423,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6430,7 +6509,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7043,7 +7122,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7129,7 +7208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7704,7 +7783,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8375,7 +8454,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8461,7 +8540,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8566,7 +8645,6 @@ GameObject:
   m_Component:
   - component: {fileID: 843010103}
   - component: {fileID: 843010104}
-  - component: {fileID: 843010105}
   m_Layer: 0
   m_Name: Item Pedastool
   m_TagString: Untagged
@@ -8587,6 +8665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 245283392}
   - {fileID: 1689309393}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8644,52 +8723,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &843010105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843010102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d260f72e2dd78a146ba3775ac8f8472f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commonItems:
-  - {fileID: 21300000, guid: 25f1c2360d79d0a43b696e387c709450, type: 3}
-  - {fileID: 21300000, guid: 95708d6c1ace8b64c95b94b1c74be904, type: 3}
-  - {fileID: 21300000, guid: 42a28dfc9ede04848904b8262156b9fb, type: 3}
-  - {fileID: 1317437765593342348, guid: 8d447cd88d4f9fb4eb754540d4f0b526, type: 3}
-  - {fileID: 21300000, guid: d462381e3a0da5e47a6ab405f9b6706c, type: 3}
-  - {fileID: 21300000, guid: 41041c99f02667a4284820e81029cbed, type: 3}
-  - {fileID: 412299141087862479, guid: 84de6428a1f20d147a0b8b8d936be151, type: 3}
-  - {fileID: 21300000, guid: 5252315d9585c0c43a8c0fb309ef1917, type: 3}
-  rareItems:
-  - {fileID: 21300000, guid: ed348e1f1c1096a4c82fde042e04f155, type: 3}
-  - {fileID: 21300000, guid: a6a118d2e6cd31643bfc830773379645, type: 3}
-  - {fileID: 1337237446944107186, guid: 9715c9808a4f0ab47bb752cc446d0789, type: 3}
-  - {fileID: -2230812567578705874, guid: 23ac2927b7eed274fb417d90b9a071ba, type: 3}
-  epicItems:
-  - {fileID: -3098990625247106378, guid: e6e7fc36ff4b26043830bf4334f9de3e, type: 3}
-  - {fileID: 21300000, guid: 69674cad7d16be44fa393c3a2d8c193c, type: 3}
-  legendaryItems:
-  - {fileID: 21300000, guid: 0541f678f7264ac4fa5237a636c356aa, type: 3}
-  blessedItems:
-  - {fileID: 21300000, guid: c4f0eee322f8ddf41bda1a61fd415a55, type: 3}
-  - {fileID: 21300000, guid: 2d3102ca218c77f488cb019936bb6f80, type: 3}
-  - {fileID: 21300000, guid: 0c1ebf0ad481ba342be1353d08a6d96e, type: 3}
-  - {fileID: 21300000, guid: 7fc63df25e7b1464ea34462038f46c27, type: 3}
-  - {fileID: 21300000, guid: 0d1108898352b934d80884553420de40, type: 3}
-  commonParticle: {fileID: 9009480852220273377, guid: 6af1720bf565f6648b2c60cf4c8902fa, type: 3}
-  rareParticle: {fileID: 6951328049468259045, guid: 39128b8a316ff46499439dabf2ffea93, type: 3}
-  epicParticle: {fileID: 3904248023956423606, guid: 86783cec9692a2943816c33d845860fe, type: 3}
-  legendaryParticle: {fileID: 6369698034353980005, guid: b61fc96836de84d4b979a5d3e62b7e6e, type: 3}
-  blessedParticle: {fileID: 8918141962667883638, guid: 4fd306b040da32b429586a14c72447d1, type: 3}
-  spawnLocation: {fileID: 843010102}
-  player: {fileID: 617387924}
-  healthBar: {fileID: 0}
-  isBlessed: 1
 --- !u!4 &860814961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8570916895489721124, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
@@ -9357,7 +9390,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9729,7 +9762,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1245536511
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 1324554861070464549, guid: 59349878742b033428d3666c0d9e2769, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9881,7 +9914,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10106,7 +10139,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10408,7 +10441,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10624,7 +10657,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10710,7 +10743,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10796,7 +10829,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11122,7 +11155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11208,7 +11241,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11466,7 +11499,7 @@ MonoBehaviour:
   gemCountText: {fileID: 2116554698}
   enemyDropChance: 40
   currentItems: []
-  itemChooserPrefab: {fileID: 6117037848160500627, guid: 8dd771c7716050e439717107803b1785, type: 3}
+  itemChooserPrefab: {fileID: 3471024045078312180, guid: 8dd771c7716050e439717107803b1785, type: 3}
   frozenSphere: 0
   frozenMultiplier: 0.15
   frozenMaterial: {fileID: 2100000, guid: a18083a9dfa37de4d8e118845b7dbae1, type: 2}
@@ -11549,7 +11582,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12458,7 +12491,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13059,7 +13092,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13208,7 +13241,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13466,7 +13499,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1217499615
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4113966682580028939, guid: 1170d29396557c64eb04604714ab92d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
