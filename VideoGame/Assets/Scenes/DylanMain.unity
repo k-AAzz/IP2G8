@@ -8660,16 +8660,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 25f1c2360d79d0a43b696e387c709450, type: 3}
   - {fileID: 21300000, guid: 95708d6c1ace8b64c95b94b1c74be904, type: 3}
   - {fileID: 21300000, guid: 42a28dfc9ede04848904b8262156b9fb, type: 3}
+  - {fileID: 1317437765593342348, guid: 8d447cd88d4f9fb4eb754540d4f0b526, type: 3}
   - {fileID: 21300000, guid: d462381e3a0da5e47a6ab405f9b6706c, type: 3}
   - {fileID: 21300000, guid: 5252315d9585c0c43a8c0fb309ef1917, type: 3}
+  - {fileID: 412299141087862479, guid: 84de6428a1f20d147a0b8b8d936be151, type: 3}
   - {fileID: 21300000, guid: 41041c99f02667a4284820e81029cbed, type: 3}
   rareItems:
   - {fileID: 21300000, guid: ed348e1f1c1096a4c82fde042e04f155, type: 3}
   - {fileID: 21300000, guid: a6a118d2e6cd31643bfc830773379645, type: 3}
+  - {fileID: 1337237446944107186, guid: 9715c9808a4f0ab47bb752cc446d0789, type: 3}
+  - {fileID: -2230812567578705874, guid: 23ac2927b7eed274fb417d90b9a071ba, type: 3}
   epicItems:
+  - {fileID: -3098990625247106378, guid: e6e7fc36ff4b26043830bf4334f9de3e, type: 3}
   - {fileID: 21300000, guid: 69674cad7d16be44fa393c3a2d8c193c, type: 3}
   legendaryItems:
   - {fileID: 21300000, guid: 0541f678f7264ac4fa5237a636c356aa, type: 3}
+  blessedItems:
+  - {fileID: 21300000, guid: c4f0eee322f8ddf41bda1a61fd415a55, type: 3}
+  - {fileID: 21300000, guid: 2d3102ca218c77f488cb019936bb6f80, type: 3}
+  - {fileID: 21300000, guid: 0c1ebf0ad481ba342be1353d08a6d96e, type: 3}
+  - {fileID: 21300000, guid: 7fc63df25e7b1464ea34462038f46c27, type: 3}
+  - {fileID: 21300000, guid: 0d1108898352b934d80884553420de40, type: 3}
   commonParticle: {fileID: 9009480852220273377, guid: 6af1720bf565f6648b2c60cf4c8902fa, type: 3}
   rareParticle: {fileID: 6951328049468259045, guid: 39128b8a316ff46499439dabf2ffea93, type: 3}
   epicParticle: {fileID: 3904248023956423606, guid: 86783cec9692a2943816c33d845860fe, type: 3}
@@ -8678,6 +8689,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 843010102}
   player: {fileID: 617387924}
   healthBar: {fileID: 0}
+  isBlessed: 0
 --- !u!4 &860814961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8570916895489721124, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}

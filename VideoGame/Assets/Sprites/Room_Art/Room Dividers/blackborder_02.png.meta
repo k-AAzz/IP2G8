@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blackborder_02_0: 4113966682580028939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

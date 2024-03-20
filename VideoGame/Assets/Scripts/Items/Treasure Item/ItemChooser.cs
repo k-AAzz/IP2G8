@@ -9,6 +9,7 @@ public class ItemChooser : MonoBehaviour
     public Sprite[] rareItems;
     public Sprite[] epicItems;
     public Sprite[] legendaryItems;
+    public Sprite[] blessedItems;
 
     [Header("Particle Prefab Array")]
     public GameObject commonParticle;
@@ -21,6 +22,9 @@ public class ItemChooser : MonoBehaviour
     public GameObject spawnLocation;
     public GameObject player;
     public GameObject healthBar;
+
+    [Header("Bools")]
+    public bool isBlessed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,33 +46,43 @@ public class ItemChooser : MonoBehaviour
         //Create new seed based on game tick so it's random each time
         Random.InitState(System.Environment.TickCount);
 
-        //Generate a random value between 0 -> 100
-        int randomValue = Random.Range(0, 100);
+        if(!isBlessed) { 
+            //Generate a random value between 0 -> 100
+            int randomValue = Random.Range(0, 100);
 
-        GameObject particlesPrefab = null;
+            GameObject particlesPrefab = null;
 
-        if (randomValue <= 69)
-        {
-            particlesPrefab = commonParticle;
-            SpawnItem(commonItems, particlesPrefab);
-        }
-        else if (randomValue >= 70 && randomValue <= 85)
-        {
-            particlesPrefab = rareParticle;
-            SpawnItem(rareItems, particlesPrefab);
-        }
-        else if (randomValue >= 86 && randomValue <= 95)
-        {
-            particlesPrefab = epicParticle;
-            SpawnItem(epicItems, particlesPrefab);
-        }
+            if (randomValue <= 69)
+            {
+                particlesPrefab = commonParticle;
+                SpawnItem(commonItems, particlesPrefab);
+            }
+            else if (randomValue >= 70 && randomValue <= 85)
+            {
+                particlesPrefab = rareParticle;
+                SpawnItem(rareItems, particlesPrefab);
+            }
+            else if (randomValue >= 86 && randomValue <= 95)
+            {
+                particlesPrefab = epicParticle;
+                SpawnItem(epicItems, particlesPrefab);
+            }
+            else
+            {
+                particlesPrefab = legendaryParticle;
+                SpawnItem(legendaryItems, particlesPrefab);
+            }
+            Debug.Log(randomValue);
+        } 
         else
         {
-            particlesPrefab = legendaryParticle;
-            SpawnItem(legendaryItems, particlesPrefab);
+            GameObject particlesPrefab = null;
+
+            particlesPrefab = blessedParticle;
+            SpawnItem(blessedItems, particlesPrefab);
         }
 
-        Debug.Log(randomValue);
+
     }
 
     void SpawnItem(Sprite[] itemsArray, GameObject particlesPrefab)

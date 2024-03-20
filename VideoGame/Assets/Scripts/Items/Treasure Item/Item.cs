@@ -145,8 +145,57 @@ public class Item : MonoBehaviour
 
                 //Legendary Items
 
-                //Blessed Items
 
+                //Blessed Items
+                case "forestsGift":
+                    //Action
+
+                    //Description
+                    itemName = "Forest's Gift";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "blessed";
+                    break;
+
+                case "enduringVigor":
+
+                    //Action
+                    HealthSystem enduringVigor = FindFirstObjectByType<HealthSystem>();
+                    enduringVigor.ItemHealthIncrease();
+                    enduringVigor.ItemHealthIncrease();
+
+                    //Description
+                    itemName = "Enduring Vigor";
+                    description = "Increase's Maximum Health by 2";
+                    rarity = "blessed";
+
+                    break;
+
+                case "destinysHorde":
+                    //Action
+
+                    //Description
+                    itemName = "Destiny's Horde";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "blessed";
+                    break;
+
+                case "fleetingGauntlets":
+                    //Action
+
+                    //Description
+                    itemName = "Fleeting Gauntlets";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "blessed";
+                    break;
+
+                case "divineShield":
+                    //Action
+
+                    //Description
+                    itemName = "Divine Shield";
+                    description = "Gives the player a bonus movespeed of 10%";
+                    rarity = "blessed";
+                    break;
 
 
 
