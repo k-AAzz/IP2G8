@@ -3,29 +3,29 @@ guid: e6e7fc36ff4b26043830bf4334f9de3e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3098990625247106378
-    second: cosmic_compass_0
+      213: 1881476139199462988
+    second: cosmicCompass_0
   - first:
-      213: -6383455850789764057
-    second: cosmic_compass_1
+      213: -3289573256648380243
+    second: cosmicCompass_1
   - first:
-      213: 616871154900463455
-    second: cosmic_compass_2
+      213: 2239324514493068766
+    second: cosmicCompass_2
   - first:
-      213: -4796120490566152779
-    second: cosmic_compass_3
+      213: -5371437789437208535
+    second: cosmicCompass_3
   - first:
-      213: 1743484809365611382
-    second: cosmic_compass_4
+      213: -7321255950400569611
+    second: cosmicCompass_4
   - first:
-      213: -1751037675940291244
-    second: cosmic_compass_5
+      213: -547098169749690752
+    second: cosmicCompass_5
   - first:
-      213: 94888888145478342
-    second: cosmic_compass_6
+      213: 8864234943288773357
+    second: cosmicCompass_6
   - first:
-      213: 477913478701655369
-    second: cosmic_compass_7
+      213: -9060201624282388192
+    second: cosmicCompass_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cosmic_compass_0
+      name: cosmicCompass_0
       rect:
         serializedVersion: 2
         x: 106
@@ -135,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ba61eb027c2ef4d0800000000000000
-      internalID: -3098990625247106378
+      spriteID: c4e7b5284985c1a10800000000000000
+      internalID: 1881476139199462988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_1
+      name: cosmicCompass_1
       rect:
         serializedVersion: 2
         x: 228
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 724894689b86967a0800000000000000
-      internalID: -6383455850789764057
+      spriteID: da039de4d861952d0800000000000000
+      internalID: -3289573256648380243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_2
+      name: cosmicCompass_2
       rect:
         serializedVersion: 2
         x: 284
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5fe60c0c019f8800800000000000000
-      internalID: 616871154900463455
+      spriteID: ed5fe2f08cda31f10800000000000000
+      internalID: 2239324514493068766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_3
+      name: cosmicCompass_3
       rect:
         serializedVersion: 2
         x: 332
@@ -198,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bd05d323d1c07db0800000000000000
-      internalID: -4796120490566152779
+      spriteID: 9285c732ac1d475b0800000000000000
+      internalID: -5371437789437208535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_4
+      name: cosmicCompass_4
       rect:
         serializedVersion: 2
         x: 27
@@ -219,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 673e68d523a123810800000000000000
-      internalID: 1743484809365611382
+      spriteID: 5feb8a6b08ca56a90800000000000000
+      internalID: -7321255950400569611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_5
+      name: cosmicCompass_5
       rect:
         serializedVersion: 2
         x: 201
@@ -240,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45dd049d28013b7e0800000000000000
-      internalID: -1751037675940291244
+      spriteID: 086adcefc115868f0800000000000000
+      internalID: -547098169749690752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_6
+      name: cosmicCompass_6
       rect:
         serializedVersion: 2
         x: 152
@@ -261,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c20b07e0fc115100800000000000000
-      internalID: 94888888145478342
+      spriteID: dea055857b6140b70800000000000000
+      internalID: 8864234943288773357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cosmic_compass_7
+      name: cosmicCompass_7
       rect:
         serializedVersion: 2
         x: 240
@@ -282,8 +282,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 945226bd6c3e1a600800000000000000
-      internalID: 477913478701655369
+      spriteID: 0292b3f20a2b34280800000000000000
+      internalID: -9060201624282388192
       vertices: []
       indices: 
       edges: []
@@ -299,14 +299,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cosmic_compass_0: -3098990625247106378
-      cosmic_compass_1: -6383455850789764057
-      cosmic_compass_2: 616871154900463455
-      cosmic_compass_3: -4796120490566152779
-      cosmic_compass_4: 1743484809365611382
-      cosmic_compass_5: -1751037675940291244
-      cosmic_compass_6: 94888888145478342
-      cosmic_compass_7: 477913478701655369
+      cosmicCompass_0: 1881476139199462988
+      cosmicCompass_1: -3289573256648380243
+      cosmicCompass_2: 2239324514493068766
+      cosmicCompass_3: -5371437789437208535
+      cosmicCompass_4: -7321255950400569611
+      cosmicCompass_5: -547098169749690752
+      cosmicCompass_6: 8864234943288773357
+      cosmicCompass_7: -9060201624282388192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

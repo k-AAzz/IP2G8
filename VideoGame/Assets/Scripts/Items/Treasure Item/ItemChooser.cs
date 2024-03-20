@@ -25,6 +25,7 @@ public class ItemChooser : MonoBehaviour
 
     [Header("Bools")]
     public bool isBlessed = false;
+    public bool itemChooserDestroy = false;
 
     // Start is called before the first frame update
     void Start()
@@ -124,6 +125,13 @@ public class ItemChooser : MonoBehaviour
 
             //Debug log item
             Debug.Log("Item: " + chosenItem.name);
+
+            // Destroy the ItemChooser if itemChooserDestroy is true
+            if (itemChooserDestroy)
+            {
+                Destroy(gameObject); // Destroy the ItemChooser itself
+
+            }
         }
         else
         {
