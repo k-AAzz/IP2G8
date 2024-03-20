@@ -5668,7 +5668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &223676064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5676,16 +5676,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223676063}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.431404, y: 1.1724088, z: 0.2632279}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1550424714}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.68, y: 0.49}
+  m_AnchoredPosition: {x: -1, y: -1.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!60 &223676065
@@ -7473,7 +7473,7 @@ Transform:
   m_GameObject: {fileID: 457031030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1993952, y: 1.5080423, z: 0.056238227}
+  m_LocalPosition: {x: -2.1993952, y: 1.5080423, z: 0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11820,7 +11820,7 @@ GameObject:
   - component: {fileID: 1371363722}
   - component: {fileID: 1371363723}
   m_Layer: 3
-  m_Name: GameObject
+  m_Name: MeleeContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11843,7 +11843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.049995422, y: -0.522}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371363723
@@ -11858,6 +11858,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6433265f3a0d1d743a8def84a304f703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToAttack: 0.25
+  meleeTimer: 0
+  isAttacking: 0
+  Aim: {fileID: 1550424714}
+  bullet: {fileID: 307416980130660265, guid: 5b365e6693d3ec84d97ca70d5f6ca92c, type: 3}
+  fireForce: 10
+  timeBetweenShooting: 0.25
+  shootTimer: 0
+  canShoot: 1
+  weaponSpriteRenderer: {fileID: 1891179987}
+  playerSpriteRenderer: {fileID: 223676066}
 --- !u!1 &1372581370
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,7 +12412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.593}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1565281734
@@ -13425,27 +13436,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3987576619734303348, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
   m_PrefabInstance: {fileID: 8621596062749752709}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1891179974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617387924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd129cbc53600e042b111eb52cbf22ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacking: 0
-  timeToAttack: 0.25
-  meleeTimer: 0
-  Aim: {fileID: 1550424714}
-  bullet: {fileID: 307416980130660265, guid: 5b365e6693d3ec84d97ca70d5f6ca92c, type: 3}
-  canShoot: 1
-  fireForce: 10
-  timeBetweenShooting: 0.25
-  shootTimer: 0
 --- !u!114 &1891179981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13469,6 +13459,11 @@ MonoBehaviour:
   currentHealth: 0
   isDead: 0
   hasShield: 0
+--- !u!212 &1891179987 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 620506108995203200, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
+  m_PrefabInstance: {fileID: 8621596062749752709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1905470752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15508,6 +15503,10 @@ PrefabInstance:
       propertyPath: Aim
       value: 
       objectReference: {fileID: 1550424714}
+    - target: {fileID: 5424153342731002472, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
+      propertyPath: m_Name
+      value: PlayerShadow
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4039267985435885174, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
     m_RemovedGameObjects: []
@@ -15519,9 +15518,6 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 1371363722}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2317846551336644536, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1891179974}
     - targetCorrespondingSourceObject: {fileID: 2317846551336644536, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1891179981}

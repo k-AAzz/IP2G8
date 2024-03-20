@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tree_vera_edit_01_0: 276356627862676013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

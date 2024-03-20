@@ -101,8 +101,8 @@ public class FlyingEnemy : MonoBehaviour
         {
             UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
             int randomIndex = UnityEngine.Random.Range(0, itemsArray.Length);
-            Debug.Log("Random Index: " + randomIndex);
-            Debug.Log("Array Length: " + itemsArray.Length);
+            //Debug.Log("Random Index: " + randomIndex);
+            //Debug.Log("Array Length: " + itemsArray.Length);
 
             Sprite chosenItem = itemsArray[randomIndex];
 
