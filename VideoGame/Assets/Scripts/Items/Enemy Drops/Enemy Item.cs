@@ -25,12 +25,27 @@ public class EnemyItem : MonoBehaviour
 
     private void Update()
     {
-        //Move towards to the player when close to them
-        if (Vector2.Distance(transform.position, player.position) < 3f)
+        if (chosenItem.name != "heart_half_0" || !IsPlayerAtMaxHealth())
         {
-            MoveTowardsPlayer();
+            //Move towards to the player when close to them
+            if (Vector2.Distance(transform.position, player.position) < 3f)
+            {
+                MoveTowardsPlayer();
+            }
         }
+
     }
+
+
+    private bool IsPlayerAtMaxHealth()
+    {
+        HealthSystem healthSystem = player.GetComponent<HealthSystem>();
+        bool isAtMaxHealth = healthSystem != null && healthSystem.currentHealth == healthSystem.maxHealth;
+        Debug.Log("Player at max health: " + isAtMaxHealth);
+        return isAtMaxHealth;
+    }
+
+
 
     private void MoveTowardsPlayer()
     {
@@ -46,7 +61,7 @@ public class EnemyItem : MonoBehaviour
     {
         GameManager gameManager = Object.FindAnyObjectByType<GameManager>();
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && (chosenItem.name != "heart_half_0" || !IsPlayerAtMaxHealth()))
         {
             switch (chosenItem.name)
             {
@@ -57,7 +72,7 @@ public class EnemyItem : MonoBehaviour
 
                     break;
 
-                case "heart_full_0":
+                case "heart_half_0":
 
                     //Heart Action
                     HealthSystem healthSystem = FindFirstObjectByType<HealthSystem>();

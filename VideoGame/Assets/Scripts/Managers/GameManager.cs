@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Global References")]
     public float enemyDropChance = 40f;
+    public List<Item> currentItems = new List<Item>();
 
     [Header("Player Statuses")]
     public bool frozenSphere = false;
@@ -27,6 +28,18 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void DebugLogCurrentItems()
+    {
+        string itemList = "Current Items:\n";
+        foreach (Item item in currentItems)
+        {
+            itemList += "Item Name: " + item.itemName + "\n";
+            itemList += "Description: " + item.description + "\n";
+            itemList += "Rarity: " + item.rarity + "\n\n";
+        }
+        Debug.Log(itemList);
     }
 
     public void AddGems(int amount)

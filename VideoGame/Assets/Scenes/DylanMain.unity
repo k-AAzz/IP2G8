@@ -8689,7 +8689,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 843010102}
   player: {fileID: 617387924}
   healthBar: {fileID: 0}
-  isBlessed: 0
+  isBlessed: 1
 --- !u!4 &860814961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8570916895489721124, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
@@ -11465,6 +11465,7 @@ MonoBehaviour:
   gemCount: 0
   gemCountText: {fileID: 2116554698}
   enemyDropChance: 40
+  currentItems: []
   frozenSphere: 0
   frozenMultiplier: 0.15
   frozenMaterial: {fileID: 2100000, guid: a18083a9dfa37de4d8e118845b7dbae1, type: 2}

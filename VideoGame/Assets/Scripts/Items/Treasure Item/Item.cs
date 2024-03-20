@@ -16,9 +16,12 @@ public class Item : MonoBehaviour
     public string rarity;
     public ItemPopup itemDisplay;
 
+    public GameManager gameManager;
+
     public void Start()
     {
         itemDisplay = GameObject.FindGameObjectWithTag("ItemPopup").GetComponent<ItemPopup>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
     public void InitializeItem(Sprite chosenItem, Sprite[] itemsArray)
     {
@@ -205,6 +208,8 @@ public class Item : MonoBehaviour
                     break;
             }
 
+            gameManager.currentItems.Add(this);
+            gameManager.DebugLogCurrentItems();
             //Destroy object after collision with player
             Destroy(gameObject);
             Destroy(particlesObject);

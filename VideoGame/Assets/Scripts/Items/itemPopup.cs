@@ -69,7 +69,7 @@ public class ItemPopup : MonoBehaviour
         }
 
         // Debug statements to verify the color values
-        Debug.Log($"Rarity: {rarity}, Color: {textColor}");
+        //Debug.Log($"Rarity: {rarity}, Color: {textColor}");
 
         // Set the color of the itemNameText
         itemNameText.color = textColor;
