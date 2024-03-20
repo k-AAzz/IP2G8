@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     [Header("Global References")]
     public float enemyDropChance = 40f;
     public List<Item> currentItems = new List<Item>();
+    public GameObject itemChooserPrefab;
 
-    [Header("Player Statuses")]
+   [Header("Player Statuses")]
     public bool frozenSphere = false;
     public float frozenMultiplier = 0.150f;
     public Material frozenMaterial;
@@ -69,5 +70,28 @@ public class GameManager : MonoBehaviour
         {
             frozenMultiplier = (float)(frozenMultiplier * 1.3);
         }
+    }
+
+    public void SpawnItemChoosers()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            Debug.LogError("Player not found in the scene!");
+            return;
+        }
+
+        // Calculate positions for the item choosers
+        Vector3 playerPosition = player.transform.position;
+        float xOffset = 3f; // Adjust as needed
+        float yOffset = -1f; // Adjust as needed
+
+        Vector3 firstChooserPosition = new Vector3(playerPosition.x - xOffset, playerPosition.y + yOffset, playerPosition.z);
+        Vector3 secondChooserPosition = new Vector3(playerPosition.x + xOffset, playerPosition.y + yOffset, playerPosition.z);
+
+        // Instantiate Item Choosers using the prefab
+        GameObject firstChooser = Instantiate(itemChooserPrefab, firstChooserPosition, Quaternion.identity);
+        GameObject secondChooser = Instantiate(itemChooserPrefab, secondChooserPosition, Quaternion.identity);
     }
 }

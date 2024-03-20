@@ -36,16 +36,12 @@ public class EnemyItem : MonoBehaviour
 
     }
 
-
     private bool IsPlayerAtMaxHealth()
     {
         HealthSystem healthSystem = player.GetComponent<HealthSystem>();
         bool isAtMaxHealth = healthSystem != null && healthSystem.currentHealth == healthSystem.maxHealth;
-        Debug.Log("Player at max health: " + isAtMaxHealth);
         return isAtMaxHealth;
     }
-
-
 
     private void MoveTowardsPlayer()
     {

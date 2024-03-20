@@ -29,7 +29,7 @@ public class ItemChooser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //
+        SpawnRandomItem();
     }
 
     // Update is called once per frame

@@ -69,6 +69,28 @@ public class Item : MonoBehaviour
 
                     break;
 
+                case "helmOfBerseker":
+
+                    //Action
+
+                    //Description
+                    itemName = "Helm of Berserker";
+                    description = "Increases Critical Chance";
+                    rarity = "common";
+
+                    break;
+
+                case "sword_of_bersker_0":
+
+                    //Action
+
+                    //Description
+                    itemName = "Sword of Berserker";
+                    description = "Increases Critical Damage";
+                    rarity = "common";
+
+                    break;
+
                 case "amuletOfVitality":
 
                     //Amulet Action
@@ -94,6 +116,17 @@ public class Item : MonoBehaviour
                     rarity = "common";
 
                 break;
+
+                case "fleeting_quiver_0":
+
+                    //Boots Action
+
+                    //Boots Description
+                    itemName = "Fleeting Quiver";
+                    description = "Increases Attack Speed";
+                    rarity = "common";
+
+                    break;
 
                 case "charmOfFortune":
 
@@ -125,29 +158,74 @@ public class Item : MonoBehaviour
                     break;
 
                 case "teatheredHearts":
-                    //Ring Action
 
+                    //Action
+
+                    //Description
                     itemName = "Teathered Hearts";
-                    description = "Gives the player a bonus movespeed of 10%";
+                    description = "Your Consuamble's Drop Hearts!";
                     rarity = "rare";
 
-                    Debug.Log("Amulet of Vitality!");
+                    break;
+
+                case "keepers_time_piece_0":
+                    
+                    //Action
+
+                    //Description
+                    itemName = "Keepers Timepiece";
+                    description = "Enemies are frozen at the start of combat";
+                    rarity = "rare";
+
+                    break;
+
+                case "barbed dager_0":
+
+                    //Action
+
+                    //Description
+                    itemName = "Barbed Dagger";
+                    description = "Your Attacks Do Bleed Damage";
+                    rarity = "rare";
+
                     break;
 
                 //Epic Items
 
-                case "amuletOfAscendance":
-                    //Ring Action
+                case "cosmic_compass_0":
 
-                    itemName = "Frozen Sphere";
-                    description = "Gives the player a bonus movespeed of 10%";
+                    //Action
+
+                    //Description
+                    itemName = "Cosmic Compass";
+                    description = "Unveils the the whole floor";
                     rarity = "epic";
 
-                    Debug.Log("Amulet of Vitality!");
+                    break;
+
+                case "amuletOfAscendance":
+
+                    //Action
+
+                    //Description
+                    itemName = "Amulet of Ascendance";
+                    description = "+2 To All Base Stats";
+                    rarity = "epic";
+
                     break;
 
                 //Legendary Items
 
+                case "divineBlade":
+
+                    //Action
+
+                    //Description
+                    itemName = "Divine Blade";
+                    description = "+30% Damage, +15% Attack Speed, +5% Crit Chance";
+                    rarity = "epic";
+
+                    break;
 
                 //Blessed Items
                 case "forestsGift":
@@ -155,7 +233,7 @@ public class Item : MonoBehaviour
 
                     //Description
                     itemName = "Forest's Gift";
-                    description = "Gives the player a bonus movespeed of 10%";
+                    description = "You Revive Upon Death";
                     rarity = "blessed";
                     break;
 
@@ -174,11 +252,14 @@ public class Item : MonoBehaviour
                     break;
 
                 case "destinysHorde":
+
                     //Action
+                    GameManager destinysHorde = FindFirstObjectByType<GameManager>();
+                    destinysHorde.SpawnItemChoosers();
 
                     //Description
                     itemName = "Destiny's Horde";
-                    description = "Gives the player a bonus movespeed of 10%";
+                    description = "Recieve two random items";
                     rarity = "blessed";
                     break;
 
