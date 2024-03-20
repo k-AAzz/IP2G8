@@ -298,7 +298,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      keepers_time_piece_0: 1337237446944107186
+      keepers_time_piece_1: 8792084510692859905
+      keepers_time_piece_2: -8499309895502184271
+      keepers_time_piece_3: 4452590619373959890
+      keepers_time_piece_4: 8047473693681459958
+      keepers_time_piece_5: -7204482224840824154
+      keepers_time_piece_6: 5329107256691034362
+      keepers_time_piece_7: -9162682867213511021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

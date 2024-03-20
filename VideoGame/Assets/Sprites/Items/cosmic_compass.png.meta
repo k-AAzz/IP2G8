@@ -298,7 +298,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cosmic_compass_0: -3098990625247106378
+      cosmic_compass_1: -6383455850789764057
+      cosmic_compass_2: 616871154900463455
+      cosmic_compass_3: -4796120490566152779
+      cosmic_compass_4: 1743484809365611382
+      cosmic_compass_5: -1751037675940291244
+      cosmic_compass_6: 94888888145478342
+      cosmic_compass_7: 477913478701655369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

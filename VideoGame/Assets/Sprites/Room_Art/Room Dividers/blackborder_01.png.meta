@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 23ac2927b7eed274fb417d90b9a071ba
+guid: 848732d4cb9f9e742a10155bd2965406
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2230812567578705874
-    second: barbed dager_0
+      213: -729143390346976297
+    second: blackborder_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barbed dager_0
+      name: blackborder_01_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 48
-        width: 414
-        height: 410
+        x: 27
+        y: 25
+        width: 2151
+        height: 1272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e208ef40acf8a01e0800000000000000
-      internalID: -2230812567578705874
+      spriteID: 7d36b0c13ff81e5f0800000000000000
+      internalID: -729143390346976297
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      barbed dager_0: -2230812567578705874
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

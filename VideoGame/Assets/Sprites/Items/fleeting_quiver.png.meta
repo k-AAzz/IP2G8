@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fleeting_quiver_0: 412299141087862479
+      fleeting_quiver_1: 4473382481980276945
+      fleeting_quiver_2: 5508482950676692443
+      fleeting_quiver_3: 6802350820630019609
+      fleeting_quiver_4: -5921582766038383282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
