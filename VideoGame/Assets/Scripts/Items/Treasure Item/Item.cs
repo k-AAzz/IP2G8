@@ -80,7 +80,7 @@ public class Item : MonoBehaviour
 
                     break;
 
-                case "sword_of_bersker_0":
+                case "swordOfBerserker":
 
                     //Action
 
@@ -117,7 +117,7 @@ public class Item : MonoBehaviour
 
                 break;
 
-                case "fleeting_quiver_0":
+                case "fleetingQuiver":
 
                     //Boots Action
 
@@ -168,7 +168,7 @@ public class Item : MonoBehaviour
 
                     break;
 
-                case "keepers_time_piece_0":
+                case "keepersTimepiece":
                     
                     //Action
 
@@ -179,7 +179,7 @@ public class Item : MonoBehaviour
 
                     break;
 
-                case "barbed dager_0":
+                case "barbedDagger":
 
                     //Action
 
@@ -192,7 +192,7 @@ public class Item : MonoBehaviour
 
                 //Epic Items
 
-                case "cosmic_compass_0":
+                case "cosmicCompass":
 
                     //Action
 
