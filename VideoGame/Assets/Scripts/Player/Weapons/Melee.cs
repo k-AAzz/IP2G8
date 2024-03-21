@@ -24,13 +24,11 @@ public class Melee : MonoBehaviour
         {
 
             collision.gameObject.GetComponent<Enemy>().TakeDamage(meleeDamage);
-            Destroy(this.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Enemy2"))
         {
             collision.gameObject.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
-            Destroy(this.gameObject);
         }
         weaponScript.meleeSlash.SetActive(false);
     }

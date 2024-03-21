@@ -21,13 +21,19 @@ public class PlayerWeapons : MonoBehaviour
         {
             
             collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-            Destroy(this.gameObject);
+            if (weaponType == WeaponType.Bullet)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
         if (collision.gameObject.CompareTag("Enemy2")) 
         {
             collision.gameObject.GetComponent<FlyingEnemy>().TakeDamage(damage);
-            Destroy(this.gameObject);
+            if (weaponType == WeaponType.Bullet)
+            {
+                Destroy(this.gameObject);
+            }
         }
             
     }
