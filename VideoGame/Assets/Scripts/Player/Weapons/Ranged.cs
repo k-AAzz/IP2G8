@@ -9,9 +9,7 @@ public class Ranged : MonoBehaviour
     [Header("Ranged Variables")]
     private WeaponAim weaponScript;
     private float rangedDamage;
-    public float bulletLife = 1f;
-
-    public AudioManager audioManager;
+    public float bulletLife = .75f;
 
     private void Start()
     {
