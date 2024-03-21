@@ -5869,7 +5869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &223676064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -77497,6 +77497,7 @@ MonoBehaviour:
   maincam: {fileID: 1219004526}
   bosscam: {fileID: 519420028}
   change: {fileID: 100431677}
+  weaponchange: 0
 --- !u!61 &567619994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81889,6 +81890,7 @@ MonoBehaviour:
   playerSpriteRenderer: {fileID: 223676066}
   bossCam: {fileID: 519420031}
   audioManager: {fileID: 1208618582}
+  room: {fileID: 567619993}
 --- !u!1 &1372581370
 GameObject:
   m_ObjectHideFlags: 0
