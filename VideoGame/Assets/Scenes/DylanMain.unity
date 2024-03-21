@@ -186,6 +186,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8773246896058160054, guid: d77e87ac8407a214e903fa88f394e42b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 87738006}
+    - targetCorrespondingSourceObject: {fileID: 8773246896058160054, guid: d77e87ac8407a214e903fa88f394e42b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 87738009}
   m_SourcePrefab: {fileID: 100100000, guid: d77e87ac8407a214e903fa88f394e42b, type: 3}
 --- !u!4 &2504993 stripped
 Transform:
@@ -5422,6 +5425,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.0000019073486, y: -0.66}
   m_Radius: 1.25
+--- !u!114 &87738009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87738003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!114 &100431677 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1301930467314357544, guid: c422b51c405ef89408846be89e020717, type: 3}
@@ -5654,7 +5673,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8577181702141573051, guid: 80f8f30f63bc55745bbfd0dc807d16d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1557080012}
   m_SourcePrefab: {fileID: 100100000, guid: 80f8f30f63bc55745bbfd0dc807d16d6, type: 3}
 --- !u!1 &187830270
 GameObject:
@@ -75349,7 +75371,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 843010102}
   player: {fileID: 617387924}
   healthBar: {fileID: 0}
-  isBlessed: 0
+  isBlessed: 1
   itemChooserDestroy: 0
 --- !u!1 &250989447
 GameObject:
@@ -77152,6 +77174,7 @@ GameObject:
   - component: {fileID: 531818660}
   - component: {fileID: 531818661}
   - component: {fileID: 531818662}
+  - component: {fileID: 531818663}
   m_Layer: 0
   m_Name: tree_vera_edit_01_0
   m_TagString: Untagged
@@ -77264,6 +77287,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.09, y: -1.61}
   m_Radius: 0.82
+--- !u!114 &531818663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531818659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &536690517 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4150749242503313942, guid: 1bbb812a76056214ca70f13735522891, type: 3}
@@ -77305,6 +77344,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0000009536743, y: -0.17}
   m_Radius: 1.62
+--- !u!114 &536690521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536690517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &554226803
 GameObject:
   m_ObjectHideFlags: 0
@@ -77724,6 +77779,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6010658667730632380, guid: 058b0454d75e80c4e9cf6d2959379e80, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1664702715}
+    - targetCorrespondingSourceObject: {fileID: 6010658667730632380, guid: 058b0454d75e80c4e9cf6d2959379e80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664702717}
   m_SourcePrefab: {fileID: 100100000, guid: 058b0454d75e80c4e9cf6d2959379e80, type: 3}
 --- !u!1001 &614085347
 PrefabInstance:
@@ -78474,6 +78532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843010103}
   - component: {fileID: 843010104}
+  - component: {fileID: 843010105}
   m_Layer: 0
   m_Name: Item Pedastool
   m_TagString: Untagged
@@ -78552,6 +78611,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &843010105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843010102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!4 &860814961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8570916895489721124, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
@@ -79171,6 +79246,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 873097411505875873, guid: 2753d40afb3db1644b1fc7fac744637c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1501387987}
+    - targetCorrespondingSourceObject: {fileID: 873097411505875873, guid: 2753d40afb3db1644b1fc7fac744637c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1501387989}
   m_SourcePrefab: {fileID: 100100000, guid: 2753d40afb3db1644b1fc7fac744637c, type: 3}
 --- !u!1 &1004679191
 GameObject:
@@ -80256,6 +80334,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4150749242503313942, guid: 1bbb812a76056214ca70f13735522891, type: 3}
       insertIndex: -1
       addedObject: {fileID: 536690519}
+    - targetCorrespondingSourceObject: {fileID: 4150749242503313942, guid: 1bbb812a76056214ca70f13735522891, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 536690521}
   m_SourcePrefab: {fileID: 100100000, guid: 1bbb812a76056214ca70f13735522891, type: 3}
 --- !u!1001 &1156786811
 PrefabInstance:
@@ -82361,6 +82442,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.04, y: -1.19}
   m_Radius: 1.4
+--- !u!114 &1501387989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83066817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1515703502
 GameObject:
   m_ObjectHideFlags: 0
@@ -82459,6 +82556,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1557080009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8577181702141573051, guid: 80f8f30f63bc55745bbfd0dc807d16d6, type: 3}
+  m_PrefabInstance: {fileID: 144283327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557080012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557080009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1565281734
 GameObject:
   m_ObjectHideFlags: 0
@@ -82680,6 +82798,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.1, y: 0.00000047683716}
   m_Radius: 0.8
+--- !u!114 &1664702717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812818827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1666360742
 GameObject:
   m_ObjectHideFlags: 0
@@ -82797,6 +82931,7 @@ GameObject:
   - component: {fileID: 1675759217}
   - component: {fileID: 1675759218}
   - component: {fileID: 1675759219}
+  - component: {fileID: 1675759220}
   m_Layer: 0
   m_Name: tree_vera_edit_01_0 (1)
   m_TagString: Untagged
@@ -82909,6 +83044,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.04, y: -1.67}
   m_Radius: 0.86
+--- !u!114 &1675759220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675759216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 2
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1689309392
 GameObject:
   m_ObjectHideFlags: 0
