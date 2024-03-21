@@ -8,6 +8,7 @@ TagManager:
   - ItemPopup
   - Enemy2
   - Shield
+  - BossCamera
   layers:
   - Default
   - TransparentFX

@@ -75398,7 +75398,7 @@ Transform:
   m_GameObject: {fileID: 250989447}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7063847, y: -3.9755983, z: 0.08021948}
+  m_LocalPosition: {x: -6.173915, y: -73.33044, z: 0.13645771}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75409,7 +75409,7 @@ Transform:
   - {fileID: 1765554904}
   - {fileID: 1341165371}
   - {fileID: 452133109}
-  m_Father: {fileID: 860814961}
+  m_Father: {fileID: 1935283968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252065009
 GameObject:
@@ -76956,7 +76956,7 @@ GameObject:
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Boss Camera
-  m_TagString: MainCamera
+  m_TagString: BossCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79171,7 +79171,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2478188926376408256, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
     - {fileID: 6484570091655104030, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8570916895489721124, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 250989448}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
 --- !u!4 &974627313 stripped
@@ -81884,6 +81887,7 @@ MonoBehaviour:
   canShoot: 1
   weaponSpriteRenderer: {fileID: 1891179987}
   playerSpriteRenderer: {fileID: 223676066}
+  bossCam: {fileID: 519420031}
   audioManager: {fileID: 1208618582}
 --- !u!1 &1372581370
 GameObject:
@@ -85512,9 +85516,6 @@ PrefabInstance:
     - {fileID: 1519354912541764710, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
     - {fileID: 3743545334963761843, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8570916895489721124, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 250989448}
     - targetCorrespondingSourceObject: {fileID: 1586320521586706907, guid: a54135c7741efd247a5d9e0abbe89025, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1397893105}

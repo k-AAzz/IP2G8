@@ -9,7 +9,8 @@ public class BossRoom : MonoBehaviour
 
     CameraController cam;
     public IdleState change;
-    
+    public bool weaponchange;
+
     void Start()
     {
         cam = Camera.main.GetComponent<CameraController>();
@@ -21,6 +22,7 @@ public class BossRoom : MonoBehaviour
             bosscam.SetActive(true);
             maincam.SetActive(false);
             change.canSeePlayer = true;
+            weaponchange = true;
         }
     }
 

@@ -29,15 +29,18 @@ public class WeaponAim : MonoBehaviour
     // Camera reference
     private Camera mainCam;
     private Vector3 mousePosition;
+    public Camera bossCam;
 
     // Other References
     private Melee meleeScript;
     public AudioManager audioManager;
+    public BossRoom room;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        
         meleeScript = FindFirstObjectByType<Melee>();
         meleeSlash.SetActive(false);
     }
@@ -119,7 +122,16 @@ public class WeaponAim : MonoBehaviour
 
     void AimWeapon()
     {
-        mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        
+
+        if (room.weaponchange == true)
+        {
+            mousePosition = bossCam.ScreenToViewportPoint(Input.mousePosition);
+        }
+        else
+        {
+            mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        }
 
         Vector3 rotation = mousePosition - transform.position;
 
