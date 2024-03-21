@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeedState : MonoBehaviour
+public class SeedState : State
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject seed;
+    public GameObject player;
+    public bool seedover;
+    public SlapState slapState;
+
+    public override State RunCurrentState()
     {
-        
+        seedtime();
+        if (seedover == true)
+        {
+            return slapState;
+        }
+        else
+        {
+            return this;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void seedtime()
     {
-        
+        GameObject seedobject = Instantiate(seed);
+        seedobject.transform.position = player.transform.position;
+        seedover = true;
     }
 }

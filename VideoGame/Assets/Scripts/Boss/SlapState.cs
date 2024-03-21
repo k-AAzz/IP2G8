@@ -9,11 +9,12 @@ public class SlapState : State
 
     public GameObject me1;
     public GameObject me2;
+    private float timer;
 
     public void slap()
     {
         int randomValue = Random.Range(1,2);
-
+        
         if (randomValue == 1)
         {
             me1.SetActive(true);
@@ -26,12 +27,14 @@ public class SlapState : State
         }
     }
 
+    
     //Can't use ienumerator? waitforseconds bruh 
 
     public override State RunCurrentState()
     {
         slap();
-        if (slapdone)
+        timer += Time.deltaTime;
+        if (slapdone && timer > 7)
         {
             return stabState;
         }

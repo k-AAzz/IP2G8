@@ -9416,6 +9416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Room
       objectReference: {fileID: 0}
+    - target: {fileID: 7966055839718345291, guid: c422b51c405ef89408846be89e020717, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4713575878666597375, guid: c422b51c405ef89408846be89e020717, type: 3}
@@ -9428,6 +9432,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2878589846795970826, guid: c422b51c405ef89408846be89e020717, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1103755762}
+    - targetCorrespondingSourceObject: {fileID: 1095618174966576329, guid: c422b51c405ef89408846be89e020717, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1213621606}
   m_SourcePrefab: {fileID: 100100000, guid: c422b51c405ef89408846be89e020717, type: 3}
 --- !u!1 &957884406
 GameObject:
@@ -10743,6 +10750,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 422135324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1213621604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1095618174966576329, guid: c422b51c405ef89408846be89e020717, type: 3}
+  m_PrefabInstance: {fileID: 948624580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1213621606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213621604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db03f79ae3a333a46afcb328d3fb6b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seed: {fileID: 0}
 --- !u!1 &1219004526
 GameObject:
   m_ObjectHideFlags: 0
