@@ -11,6 +11,8 @@ public class Ranged : MonoBehaviour
     private float rangedDamage;
     public float bulletLife = 1f;
 
+    public AudioManager audioManager;
+
     private void Start()
     {
         weaponScript = FindFirstObjectByType<WeaponAim>();

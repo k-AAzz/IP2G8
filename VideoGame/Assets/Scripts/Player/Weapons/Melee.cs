@@ -8,6 +8,9 @@ public class Melee : MonoBehaviour
     private WeaponAim weaponScript;
     private float meleeDamage;
 
+    public AudioManager audioManager;
+    public string[] hitSoundOptions = { "HitSoundOne", "HitSoundTwo", "HitSoundThree" };
+
     //Track which enemies have already been hit
     private HashSet<Collider2D> hitEnemies = new HashSet<Collider2D>();
 
@@ -23,12 +26,18 @@ public class Melee : MonoBehaviour
         {
             collision.GetComponent<Enemy>().TakeDamage(meleeDamage);
             hitEnemies.Add(collision);
+
+            string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
+            audioManager.PlayAudio(randomSound);
         }
 
         if (collision.CompareTag("Enemy2") && !hitEnemies.Contains(collision))
         {
             collision.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
             hitEnemies.Add(collision);
+
+            string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
+            audioManager.PlayAudio(randomSound);
         }
     }
 

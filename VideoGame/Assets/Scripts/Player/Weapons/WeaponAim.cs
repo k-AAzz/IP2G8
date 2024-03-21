@@ -29,14 +29,16 @@ public class WeaponAim : MonoBehaviour
     // Camera reference
     private Camera mainCam;
     private Vector3 mousePosition;
+
+    // Other References
     private Melee meleeScript;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         meleeScript = FindFirstObjectByType<Melee>();
-
         meleeSlash.SetActive(false);
     }
 
@@ -45,14 +47,19 @@ public class WeaponAim : MonoBehaviour
     {
         CheckMeleeTimer();
         CheckCanShoot();
-        AimWeapon();
 
-        if (Input.GetMouseButtonDown(0) && !isAttacking)
+        if (!meleeSlash.activeSelf)
+        {
+            AimWeapon();
+        }
+
+
+        if (Input.GetMouseButtonDown(0) && !isAttacking && canShoot)
         {
             Melee();
         }
 
-        if (Input.GetMouseButtonDown(1) && canShoot)
+        if (Input.GetMouseButtonDown(1) && canShoot && !isAttacking)
         {
             Shoot();
         }
@@ -62,6 +69,7 @@ public class WeaponAim : MonoBehaviour
     {
         isAttacking = true;
         meleeSlash.SetActive(true);
+        audioManager.PlayAudio("AttackSlash");
         StartCoroutine(HideMelee());
     }
 
@@ -77,6 +85,7 @@ public class WeaponAim : MonoBehaviour
         canShoot = false;
         GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
         intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
+        audioManager.PlayAudio("ThrowingSound");
     }
 
     void CheckMeleeTimer()
