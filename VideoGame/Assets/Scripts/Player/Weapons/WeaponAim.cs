@@ -6,13 +6,17 @@ public class WeaponAim : MonoBehaviour
     private GameObject attackArea;
 
     [Header("Melee Settings")]
+    public GameObject meleeSlash;
+    public float meleeDamage = 2.5f;
     public float meleeAttackSpeed = 0.25f;
     public float meleeTimer = 0f;
     public bool isAttacking = false;
 
+
     [Header("Ranged Settings")]
     public Transform Aim;
     public GameObject bullet;
+    public float rangedDamage = 2.5f;
     public float fireForce = 10f;
     public float rangedAttackSpeed = 0.25f;
     public float shootTimer = 0f;
@@ -29,7 +33,6 @@ public class WeaponAim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        attackArea = transform.GetChild(0).GetChild(0).gameObject;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -38,21 +41,30 @@ public class WeaponAim : MonoBehaviour
     {
         CheckMeleeTimer();
         CheckCanShoot();
+        AimWeapon();
 
-        if (isAttacking == false)
+        if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
-            AimWeapon();
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            
+            Melee();
         }
 
         if (Input.GetMouseButtonDown(1) && canShoot)
         {
             Shoot();
         }
+    }
+
+    public void Melee()
+    {
+        isAttacking = true;
+        meleeSlash.SetActive(true);
+        StartCoroutine(HideMelee());
+    }
+
+    private IEnumerator HideMelee()
+    {
+        yield return new WaitForSeconds(0.25f);
+        meleeSlash.SetActive(false);
     }
 
     void Shoot()
@@ -72,6 +84,7 @@ public class WeaponAim : MonoBehaviour
             {
                 meleeTimer = 0f;
                 isAttacking = false;
+
             }
         }
     }
