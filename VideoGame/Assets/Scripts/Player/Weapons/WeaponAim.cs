@@ -129,4 +129,11 @@ public class WeaponAim : MonoBehaviour
             Debug.Log("Rotation Angle: " + rotZ);
         }
     }
+
+    //Item Functions
+    public void ItemDamageIncrease()
+    {
+        meleeDamage = (float)(meleeDamage * 1.3);
+        rangedDamage = (float)(meleeDamage * 1.3);
+    }
 }
