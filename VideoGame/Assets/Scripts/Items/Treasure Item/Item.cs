@@ -59,8 +59,8 @@ public class Item : MonoBehaviour
                 case "gauntletsOfStrength":
 
                     //Gauntlets Action
-                    WeaponAim gauntlets = FindFirstObjectByType<WeaponAim>();
-                    gauntlets.ItemDamageIncrease();
+                    PlayerWeapons playerWeapons = FindFirstObjectByType<PlayerWeapons>();
+                    playerWeapons.ItemDamageIncrease();
                
                     //Gauntlets Description
                     itemName = "Gauntlets Of Strength";

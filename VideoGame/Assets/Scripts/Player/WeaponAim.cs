@@ -6,17 +6,13 @@ public class WeaponAim : MonoBehaviour
     private GameObject attackArea;
 
     [Header("Melee Settings")]
-    public GameObject meleeSlash;
-    public float meleeDamage = 2.5f;
     public float meleeAttackSpeed = 0.25f;
     public float meleeTimer = 0f;
     public bool isAttacking = false;
 
-
     [Header("Ranged Settings")]
     public Transform Aim;
     public GameObject bullet;
-    public float rangedDamage = 2.5f;
     public float fireForce = 10f;
     public float rangedAttackSpeed = 0.25f;
     public float shootTimer = 0f;
@@ -30,16 +26,11 @@ public class WeaponAim : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePosition;
 
-    // Other References
-    private Melee meleeScript;
-    public AudioManager audioManager;
-
     // Start is called before the first frame update
     void Start()
     {
+        attackArea = transform.GetChild(0).GetChild(0).gameObject;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        meleeScript = FindFirstObjectByType<Melee>();
-        meleeSlash.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,36 +39,20 @@ public class WeaponAim : MonoBehaviour
         CheckMeleeTimer();
         CheckCanShoot();
 
-        if (!meleeSlash.activeSelf)
+        if (isAttacking == false)
         {
             AimWeapon();
         }
 
-
-        if (Input.GetMouseButtonDown(0) && !isAttacking && canShoot)
+        if (Input.GetMouseButtonDown(0))
         {
-            Melee();
+            
         }
 
-        if (Input.GetMouseButtonDown(1) && canShoot && !isAttacking)
+        if (Input.GetMouseButtonDown(1) && canShoot)
         {
             Shoot();
         }
-    }
-
-    public void Melee()
-    {
-        isAttacking = true;
-        meleeSlash.SetActive(true);
-        audioManager.PlayAudio("AttackSlash");
-        StartCoroutine(HideMelee());
-    }
-
-    private IEnumerator HideMelee()
-    {
-        yield return new WaitForSeconds(0.25f);
-        meleeSlash.SetActive(false);
-        meleeScript.OnAttackAnimationFinished();
     }
 
     void Shoot()
@@ -85,7 +60,6 @@ public class WeaponAim : MonoBehaviour
         canShoot = false;
         GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
         intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
-        audioManager.PlayAudio("ThrowingSound");
     }
 
     void CheckMeleeTimer()
@@ -98,7 +72,6 @@ public class WeaponAim : MonoBehaviour
             {
                 meleeTimer = 0f;
                 isAttacking = false;
-
             }
         }
     }
@@ -142,12 +115,5 @@ public class WeaponAim : MonoBehaviour
         {
             Debug.Log("Rotation Angle: " + rotZ);
         }
-    }
-
-    //Item Functions
-    public void ItemDamageIncrease()
-    {
-        meleeDamage = (float)(meleeDamage * 1.3);
-        rangedDamage = (float)(meleeDamage * 1.3);
     }
 }
