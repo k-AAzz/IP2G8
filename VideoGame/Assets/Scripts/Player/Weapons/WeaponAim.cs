@@ -29,11 +29,15 @@ public class WeaponAim : MonoBehaviour
     // Camera reference
     private Camera mainCam;
     private Vector3 mousePosition;
+    private Melee meleeScript;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        meleeScript = FindFirstObjectByType<Melee>();
+
+        meleeSlash.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,6 +69,7 @@ public class WeaponAim : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         meleeSlash.SetActive(false);
+        meleeScript.OnAttackAnimationFinished();
     }
 
     void Shoot()

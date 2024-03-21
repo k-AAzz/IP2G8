@@ -8,24 +8,34 @@ public class Melee : MonoBehaviour
     private WeaponAim weaponScript;
     private float meleeDamage;
 
+    //Track which enemies have already been hit
+    private HashSet<Collider2D> hitEnemies = new HashSet<Collider2D>();
+
     void Start()
     {
-      weaponScript = FindFirstObjectByType<WeaponAim>();
-      meleeDamage = weaponScript.meleeDamage;
+        weaponScript = FindFirstObjectByType<WeaponAim>();
+        meleeDamage = weaponScript.meleeDamage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && !hitEnemies.Contains(collision))
         {
-
-            collision.gameObject.GetComponent<Enemy>().TakeDamage(meleeDamage);
+            collision.GetComponent<Enemy>().TakeDamage(meleeDamage);
+            hitEnemies.Add(collision);
         }
 
-        if (collision.gameObject.CompareTag("Enemy2"))
+        if (collision.CompareTag("Enemy2") && !hitEnemies.Contains(collision))
         {
-            collision.gameObject.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
+            collision.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
+            hitEnemies.Add(collision);
         }
+    }
+
+    public void OnAttackAnimationFinished()
+    {
+        //Clear hash list and deactivate attack
+        hitEnemies.Clear(); 
         weaponScript.meleeSlash.SetActive(false);
     }
 }
