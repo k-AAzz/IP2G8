@@ -75596,6 +75596,7 @@ MonoBehaviour:
   moveSpeed: 3.5
   health: 10
   damage: 0
+  hitFlash: 0
   me: {fileID: 294028973}
   player: {fileID: 0}
   enemyDrop:
@@ -75626,7 +75627,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81879,6 +81880,7 @@ MonoBehaviour:
   meleeAttackSpeed: 1
   meleeTimer: 0
   isAttacking: 0
+  knockbackForce: 2.5
   Aim: {fileID: 1550424714}
   bullet: {fileID: 307416980130660265, guid: 5b365e6693d3ec84d97ca70d5f6ca92c, type: 3}
   rangedDamage: 2.5
@@ -81889,6 +81891,7 @@ MonoBehaviour:
   weaponSpriteRenderer: {fileID: 1891179987}
   playerSpriteRenderer: {fileID: 223676066}
   bossCam: {fileID: 519420031}
+  meleeScript: {fileID: 223676067}
   audioManager: {fileID: 1208618582}
   room: {fileID: 567619993}
 --- !u!1 &1372581370
@@ -82621,6 +82624,7 @@ MonoBehaviour:
   frozenMultiplier: 0.15
   frozenMaterial: {fileID: 2100000, guid: a18083a9dfa37de4d8e118845b7dbae1, type: 2}
   frozenParticle: {fileID: 5268004889694731634, guid: 4127a7b0627e8f049a5f8f3e5d1c7ac4, type: 3}
+  hitFlashMaterial: {fileID: 2100000, guid: 0461d011bcb94ae4f9269eaa0da915f9, type: 2}
 --- !u!4 &1565281736
 Transform:
   m_ObjectHideFlags: 0

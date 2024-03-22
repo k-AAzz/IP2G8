@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public Material frozenMaterial;
     public GameObject frozenParticle;
 
+    [Header("Material References")]
+    public Material hitFlashMaterial;
+
     void Start()
     {
         gemCountText.text = gemCount.ToString();

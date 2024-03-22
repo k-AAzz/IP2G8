@@ -24,22 +24,28 @@ public class Melee : MonoBehaviour
     {
         if (collision.CompareTag("Enemy") && !hitEnemies.Contains(collision))
         {
-            collision.GetComponent<Enemy>().TakeDamage(meleeDamage);
-            hitEnemies.Add(collision);
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(meleeDamage);
+                hitEnemies.Add(collision);
+                enemy.hitFlash = true;
 
-            string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
-            audioManager.PlayAudio(randomSound);
+                string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
+                audioManager.PlayAudio(randomSound);
+            }
         }
 
         if (collision.CompareTag("Enemy2") && !hitEnemies.Contains(collision))
-        {
-            collision.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
-            hitEnemies.Add(collision);
+            {
+                collision.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
+                hitEnemies.Add(collision);
 
-            string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
-            audioManager.PlayAudio(randomSound);
+                string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
+                audioManager.PlayAudio(randomSound);
+            }
         }
-    }
+
 
     public void OnAttackAnimationFinished()
     {

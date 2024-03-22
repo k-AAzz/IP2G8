@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float health = 10;
     private bool isDead = false;
     public int damage = 1;
+    public bool hitFlash = false;
 
     [Header("Game Objects")]
     public GameObject me;
@@ -68,6 +69,11 @@ public class Enemy : MonoBehaviour
         }
 
         agent.speed = moveSpeed;
+
+        if (hitFlash)
+        {
+            StartCoroutine(HitFlash());
+        }
 
         LookAtPlayer();
     }
@@ -187,6 +193,27 @@ public class Enemy : MonoBehaviour
             spriteRenderer.material = originalMaterial;
         }
     }
+
+    IEnumerator HitFlash()
+    {
+        Material hitFlashMaterial = gameManager.hitFlashMaterial;
+
+        if (hitFlashMaterial != null)
+        {
+            MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
+            spriteRenderer.GetPropertyBlock(materialPropertyBlock);
+            materialPropertyBlock.SetColor("_Color", Color.red);
+            spriteRenderer.SetPropertyBlock(materialPropertyBlock);
+        }
+
+        yield return new WaitForSeconds(0.25f);
+        hitFlash = false;
+
+        // Reset material property block to original material
+        spriteRenderer.SetPropertyBlock(null);
+    }
+
+
 
     void OnGUI()
     {

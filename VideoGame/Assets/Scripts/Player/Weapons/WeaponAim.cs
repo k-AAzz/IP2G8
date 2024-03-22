@@ -11,6 +11,7 @@ public class WeaponAim : MonoBehaviour
     public float meleeAttackSpeed = 0.25f;
     public float meleeTimer = 0f;
     public bool isAttacking = false;
+    public float knockbackForce = 6f;
 
 
     [Header("Ranged Settings")]
@@ -32,7 +33,7 @@ public class WeaponAim : MonoBehaviour
     public Camera bossCam;
 
     // Other References
-    private Melee meleeScript;
+    public Melee meleeScript;
     public AudioManager audioManager;
     public BossRoom room;
 
@@ -40,8 +41,6 @@ public class WeaponAim : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        
-        meleeScript = FindFirstObjectByType<Melee>();
         meleeSlash.SetActive(false);
     }
 
