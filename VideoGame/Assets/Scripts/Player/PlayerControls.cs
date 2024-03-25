@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour
 
     public float moveSpeed = 4f;
     public float friction = 1.5f;
+    public bool hitFlash = false;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -15,6 +16,15 @@ public class PlayerControls : MonoBehaviour
 
     public Transform Aim;
     private bool isWalking;
+
+    private SpriteRenderer spriteRenderer;
+    private GameManager gameManager;
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        gameManager = FindFirstObjectByType<GameManager>();
+    }
 
     void Update()
     {
@@ -30,6 +40,12 @@ public class PlayerControls : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        if (hitFlash)
+        {
+            StartCoroutine(HitFlash());
+        }
+
     }
 
     void FixedUpdate()
@@ -42,7 +58,25 @@ public class PlayerControls : MonoBehaviour
 
         //Move the rigidboy using the calculation including friction
         rb.MovePosition(rb.position + veloctiy * Time.fixedDeltaTime);
+    }
 
+    IEnumerator HitFlash()
+    {
+        Material hitFlashMaterial = gameManager.hitFlashMaterial;
+
+        if (hitFlashMaterial != null)
+        {
+            MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
+            spriteRenderer.GetPropertyBlock(materialPropertyBlock);
+            materialPropertyBlock.SetColor("_Color", Color.red);
+            spriteRenderer.SetPropertyBlock(materialPropertyBlock);
+        }
+
+        yield return new WaitForSeconds(0.25f);
+        hitFlash = false;
+
+        // Reset material property block to original material
+        spriteRenderer.SetPropertyBlock(null);
     }
 
     //Item Functions

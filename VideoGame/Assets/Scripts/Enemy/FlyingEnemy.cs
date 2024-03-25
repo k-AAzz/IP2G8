@@ -22,6 +22,7 @@ public class FlyingEnemy : MonoBehaviour
     [Header("Health")]
     public float health = 10f;
     private bool isDead = false;
+    public bool hitFlash = false;
     public GameObject me;
 
     [Header("Enemy Drops")]
@@ -31,7 +32,9 @@ public class FlyingEnemy : MonoBehaviour
 
     [Header("References")]
     private GameManager gameManager;
+    private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
+
 
     void Start()
     {
@@ -42,10 +45,10 @@ public class FlyingEnemy : MonoBehaviour
         agent.speed = moveSpeed;
         originalMoveSpeed = moveSpeed;
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
         gameManager = FindFirstObjectByType<GameManager>();
 
         //Store the original material
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
             originalMaterial = spriteRenderer.material;
@@ -72,6 +75,12 @@ public class FlyingEnemy : MonoBehaviour
         {
             Destroy(me);
         }
+
+        if (hitFlash)
+        {
+            StartCoroutine(HitFlash());
+        }
+
         agent.speed = moveSpeed;
     }
 
@@ -174,6 +183,25 @@ public class FlyingEnemy : MonoBehaviour
         {
             spriteRenderer.material = originalMaterial;
         }
+    }
+
+    IEnumerator HitFlash()
+    {
+        Material hitFlashMaterial = gameManager.hitFlashMaterial;
+
+        if (hitFlashMaterial != null)
+        {
+            MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
+            spriteRenderer.GetPropertyBlock(materialPropertyBlock);
+            materialPropertyBlock.SetColor("_Color", Color.red);
+            spriteRenderer.SetPropertyBlock(materialPropertyBlock);
+        }
+
+        yield return new WaitForSeconds(0.25f);
+        hitFlash = false;
+
+        // Reset material property block to original material
+        spriteRenderer.SetPropertyBlock(null);
     }
 
     void OnGUI()

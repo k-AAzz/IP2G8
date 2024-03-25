@@ -43,6 +43,7 @@ public class EnemyBulletScript : MonoBehaviour
             if (player)
             {
                 player.TakeDamage(damage);
+                player.GetComponent<PlayerControls>().hitFlash = true;
             }
 
             Destroy(gameObject);

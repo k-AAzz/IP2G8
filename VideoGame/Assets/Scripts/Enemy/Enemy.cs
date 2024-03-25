@@ -98,6 +98,7 @@ public class Enemy : MonoBehaviour
     void AttackPlayer()
     {
         player.GetComponent<HealthSystem>().TakeDamage(damage);
+        player.GetComponent<PlayerControls>().hitFlash = true;
     }
 
     public void LookAtPlayer()
@@ -236,8 +237,6 @@ public class Enemy : MonoBehaviour
         // Reset material property block to original material
         spriteRenderer.SetPropertyBlock(null);
     }
-
-
 
     void OnGUI()
     {

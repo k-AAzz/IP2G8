@@ -29,8 +29,8 @@ public class Melee : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(meleeDamage);
-                hitEnemies.Add(collision);
                 enemy.hitFlash = true;
+                hitEnemies.Add(collision);
                 ApplyKnockbackToEnemy(enemy, transform.position);
 
                 string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
@@ -44,6 +44,7 @@ public class Melee : MonoBehaviour
             if (flyingEnemy != null)
             {
                 flyingEnemy.TakeDamage(meleeDamage);
+                flyingEnemy.hitFlash = true;
                 hitEnemies.Add(collision);
                 ApplyKnockbackToFlyingEnemy(flyingEnemy, transform.position);
 
