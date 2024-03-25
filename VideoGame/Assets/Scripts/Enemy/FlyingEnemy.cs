@@ -68,16 +68,10 @@ public class FlyingEnemy : MonoBehaviour
             ChasePlayer();
         }
 
-        if (isDead == true)
+        if (isDead)
         {
             Destroy(me);
         }
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            health -= 25;
-        }
-
         agent.speed = moveSpeed;
     }
 
@@ -88,12 +82,15 @@ public class FlyingEnemy : MonoBehaviour
 
     void AttackPlayer()
     {
+        // Set destination to current position to stop the enemy
         agent.SetDestination(transform.position);
 
         transform.right = target.position - transform.position;
 
+        // Instantiate bullet or any other attack mechanism here
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
+
 
     void SpawnDrop(Sprite[] itemsArray)
     {

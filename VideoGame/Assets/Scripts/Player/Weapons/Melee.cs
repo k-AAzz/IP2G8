@@ -7,6 +7,7 @@ public class Melee : MonoBehaviour
     [Header("Melee Variables")]
     private WeaponAim weaponScript;
     private float meleeDamage;
+    public float knockbackDuration = 0.2f; // Adjust this value as needed
 
     public AudioManager audioManager;
     public string[] hitSoundOptions = { "HitSoundOne", "HitSoundTwo", "HitSoundThree" };
@@ -30,6 +31,7 @@ public class Melee : MonoBehaviour
                 enemy.TakeDamage(meleeDamage);
                 hitEnemies.Add(collision);
                 enemy.hitFlash = true;
+                ApplyKnockbackToEnemy(enemy, transform.position);
 
                 string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
                 audioManager.PlayAudio(randomSound);
@@ -37,20 +39,54 @@ public class Melee : MonoBehaviour
         }
 
         if (collision.CompareTag("Enemy2") && !hitEnemies.Contains(collision))
+        {
+            FlyingEnemy flyingEnemy = collision.GetComponent<FlyingEnemy>();
+            if (flyingEnemy != null)
             {
-                collision.GetComponent<FlyingEnemy>().TakeDamage(meleeDamage);
+                flyingEnemy.TakeDamage(meleeDamage);
                 hitEnemies.Add(collision);
+                ApplyKnockbackToFlyingEnemy(flyingEnemy, transform.position);
 
                 string randomSound = hitSoundOptions[Random.Range(0, hitSoundOptions.Length)];
                 audioManager.PlayAudio(randomSound);
             }
         }
+    }
 
+    //Ground Enemy Knockback
+    private void ApplyKnockbackToEnemy(Enemy enemy, Vector3 origin)
+    {
+        StartCoroutine(LerpKnockback(enemy.transform, origin, knockbackDuration));
+    }
+
+    //Flying Enemy Knockback
+    private void ApplyKnockbackToFlyingEnemy(FlyingEnemy flyingEnemy, Vector3 origin)
+    {
+        StartCoroutine(LerpKnockback(flyingEnemy.transform, origin, knockbackDuration));
+    }
+
+    //Lerping knockack coroutine
+    private IEnumerator LerpKnockback(Transform targetTransform, Vector3 origin, float duration)
+    {
+        float elapsedTime = 0f;
+        Vector3 startPosition = targetTransform.position;
+        Vector3 knockbackDirection = (targetTransform.position - origin).normalized;
+
+        while (elapsedTime < duration)
+        {
+            float t = elapsedTime / duration;
+            targetTransform.position = Vector3.Lerp(startPosition, startPosition + knockbackDirection, t);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        targetTransform.position = startPosition + knockbackDirection;
+    }
 
     public void OnAttackAnimationFinished()
     {
         //Clear hash list and deactivate attack
-        hitEnemies.Clear(); 
+        hitEnemies.Clear();
         weaponScript.meleeSlash.SetActive(false);
     }
 }

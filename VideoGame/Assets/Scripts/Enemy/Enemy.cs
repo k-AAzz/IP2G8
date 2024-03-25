@@ -6,15 +6,17 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] Transform target;
-    [SerializeField] float moveSpeed = 3.5f;
+    public Transform target;
+    public float moveSpeed = 3.5f;
     private float originalMoveSpeed;
     private NavMeshAgent agent;
 
     [Header("Health")]
     public float health = 10;
-    private bool isDead = false;
+    public float attackRange = 2.0f;
     public int damage = 1;
+    private bool canAttack = true;
+    private bool isDead = false;
     public bool hitFlash = false;
 
     [Header("Game Objects")]
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
     private GameObject frozenParticleInstance;
+    private Animator animator;
 
     public bool enemyFrozen = false;
     public bool isFlipped = false;
@@ -39,13 +42,13 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
         agent.speed = moveSpeed;
         originalMoveSpeed = moveSpeed;
 
         gameManager = FindFirstObjectByType<GameManager>();
-
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
 
         //Store the original material
         if (spriteRenderer != null)
@@ -63,19 +66,38 @@ public class Enemy : MonoBehaviour
             Destroy(me);
         }
 
-        if (Input.GetKey(KeyCode.Q))
-        {
-            health -= 25;
-        }
-
-        agent.speed = moveSpeed;
-
         if (hitFlash)
         {
             StartCoroutine(HitFlash());
         }
 
+        // Check if player is in attack range
+        if (canAttack && Vector3.Distance(transform.position, target.position) <= attackRange)
+        {
+            AttackPlayer();
+            StartCoroutine(Attack());
+        }
+
         LookAtPlayer();
+        agent.speed = moveSpeed;
+    }
+
+    IEnumerator Attack()
+    {
+        canAttack = false;
+        moveSpeed = 0;
+        animator.SetBool("Walker 2", false);
+
+        yield return new WaitForSeconds(2.0f);
+
+        canAttack = true;
+        moveSpeed = originalMoveSpeed;
+        animator.SetBool("Walker 2", true);
+    }
+
+    void AttackPlayer()
+    {
+        player.GetComponent<HealthSystem>().TakeDamage(damage);
     }
 
     public void LookAtPlayer()
@@ -193,6 +215,8 @@ public class Enemy : MonoBehaviour
             spriteRenderer.material = originalMaterial;
         }
     }
+
+
 
     IEnumerator HitFlash()
     {
