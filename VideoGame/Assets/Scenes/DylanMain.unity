@@ -75629,7 +75629,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75756,7 +75756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &294885593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75778,6 +75778,7 @@ MonoBehaviour:
   bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
   bulletPos: {fileID: 294885597}
   health: 10
+  hitFlash: 0
   me: {fileID: 294885592}
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
@@ -84499,7 +84500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &2046412787
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -84557,6 +84558,7 @@ MonoBehaviour:
   bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
   bulletPos: {fileID: 2046412791}
   health: 10
+  hitFlash: 0
   me: {fileID: 2046412786}
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
@@ -85554,7 +85556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &7026395255928579373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85625,6 +85627,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1245536511
       objectReference: {fileID: 0}
+    - target: {fileID: 620506108995203200, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 2317846551336644536, guid: 977ccef09e5a1f24fb762f591453532d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -85756,6 +85762,7 @@ MonoBehaviour:
   bullet: {fileID: 8763029311401033559, guid: 0f732a75b0ae64e45bb530f91e947357, type: 3}
   bulletPos: {fileID: 6483337486592886436}
   health: 10
+  hitFlash: 0
   me: {fileID: 6766388286051880514}
   enemyDrop:
   - {fileID: -16793423984005362, guid: eb607a8113dd4e54db8ac8264f1d7c87, type: 3}
