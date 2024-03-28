@@ -7,8 +7,11 @@ public class CameraNew : MonoBehaviour
 
     private void Update()
     {
-        Vector3 targetPosition = target.position;
-        transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing * Time.deltaTime);
+        if(target != null)
+        {
+            Vector3 targetPosition = target.position;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing * Time.deltaTime);
+        }
     }
 
     public void SetTarget(Transform newTarget)

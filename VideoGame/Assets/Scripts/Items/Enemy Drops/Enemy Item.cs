@@ -55,7 +55,7 @@ public class EnemyItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        GameManager gameManager = Object.FindAnyObjectByType<GameManager>();
+        GameManager gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 
         if (other.CompareTag("Player") && (chosenItem.name != "heart_half_0" || !IsPlayerAtMaxHealth()))
         {

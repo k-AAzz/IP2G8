@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Currency_collection : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private GameManager gameManager;
 
     void Start()
     {
-        //    audioSource = GetComponent<AudioSource>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")
         {
-          
+            gameManager.AddGems(1);
             Destroy(gameObject);
             //    audioSource.Play();
         }
