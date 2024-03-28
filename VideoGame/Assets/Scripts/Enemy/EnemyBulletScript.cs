@@ -9,6 +9,8 @@ public class EnemyBulletScript : MonoBehaviour
     public float force;
     private float timer;
 
+    public AudioSource audioPlayer;
+
     public int damage = 1;
     // Start is called before the first frame update
     void Start()
@@ -49,4 +51,19 @@ public class EnemyBulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            audioPlayer.Play();
+
+        }
+
+
+
+    }
+
+
+
 }

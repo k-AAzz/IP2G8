@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+
 public class FlyingEnemy : MonoBehaviour
 {
     [Header("Movement")]
@@ -34,6 +36,11 @@ public class FlyingEnemy : MonoBehaviour
     private GameManager gameManager;
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
+
+    public AudioSource audioPlayer;
+
+
+
 
 
     void Start()
@@ -213,4 +220,18 @@ public class FlyingEnemy : MonoBehaviour
             GUI.Label(new Rect(screenPosition.x, Screen.height - screenPosition.y, 100, 20), "HP: " + health);
         }
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            audioPlayer.Play();
+
+        }
+
+
+
+    }
+
+
 }

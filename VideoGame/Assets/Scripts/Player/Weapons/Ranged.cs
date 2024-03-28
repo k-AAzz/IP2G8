@@ -11,6 +11,8 @@ public class Ranged : MonoBehaviour
     private float rangedDamage;
     public float bulletLife = .75f;
 
+    public AudioSource audioPlayer;
+
     private void Start()
     {
         weaponScript = FindFirstObjectByType<WeaponAim>();
@@ -36,4 +38,17 @@ public class Ranged : MonoBehaviour
     {
         Destroy(this.gameObject, bulletLife);
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            audioPlayer.Play();
+
+        }
+
+
+
+    }
+
 }
