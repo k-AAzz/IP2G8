@@ -25,6 +25,5 @@ public class RoomTransition : MonoBehaviour
             // player offset
             other.transform.position += playerChange;
         }
-
     }
 }

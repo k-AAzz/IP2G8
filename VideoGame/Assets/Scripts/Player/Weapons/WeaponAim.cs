@@ -121,24 +121,24 @@ public class WeaponAim : MonoBehaviour
 
     void AimWeapon()
     {
-        
+        // Get the mouse position in world coordinates
+        mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0; // Ensure z-coordinate is 0 (assuming 2D)
 
-        if (room.weaponchange == true)
-        {
-            mousePosition = bossCam.ScreenToViewportPoint(Input.mousePosition);
-        }
-        else
-        {
-            mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        }
+        // Calculate the direction vector from the player's position to the mouse position
+        Vector3 direction = (mousePosition - transform.position).normalized;
 
-        Vector3 rotation = mousePosition - transform.position;
+        // Calculate the angle in degrees
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        float rotZ = Mathf.Atan2(-rotation.x, -rotation.y) * Mathf.Rad2Deg;
+        // Add a 90-degree offset to the angle
+        angle += 90f;
 
-        transform.rotation = Quaternion.Euler(0, 0, -rotZ);
+        // Apply the rotation to the weapon
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        if (rotZ < 90 && rotZ > -90)
+        // Adjust the weapon's sorting order based on rotation
+        if (angle < 90 && angle > -90)
         {
             weaponSpriteRenderer.sortingLayerName = playerSpriteRenderer.sortingLayerName;
             weaponSpriteRenderer.sortingOrder = playerSpriteRenderer.sortingOrder - 1;
@@ -149,11 +149,14 @@ public class WeaponAim : MonoBehaviour
             weaponSpriteRenderer.sortingOrder = playerSpriteRenderer.sortingOrder + 1;
         }
 
+        // Debug log the rotation angle
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Rotation Angle: " + rotZ);
+            Debug.Log("Rotation Angle: " + angle);
         }
     }
+
+
 
     //Item Functions
     public void ItemDamageIncrease()
