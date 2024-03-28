@@ -84,6 +84,7 @@ public class WeaponAim : MonoBehaviour
 
     void Shoot()
     {
+        //Set shoot to false, create bullet and play sound
         canShoot = false;
         GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
         intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
@@ -92,6 +93,7 @@ public class WeaponAim : MonoBehaviour
 
     void CheckMeleeTimer()
     {
+        //Check if is attacking
         if (isAttacking)
         {
             meleeTimer += Time.deltaTime;
@@ -107,6 +109,7 @@ public class WeaponAim : MonoBehaviour
 
     void CheckCanShoot()
     {
+        //Check if can't shoot
         if (!canShoot)
         {
             shootTimer += Time.deltaTime;
@@ -121,38 +124,34 @@ public class WeaponAim : MonoBehaviour
 
     void AimWeapon()
     {
-        // Get the mouse position in world coordinates
+        //Get the mouse position
         mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0; // Ensure z-coordinate is 0 (assuming 2D)
+        mousePosition.z = 0;
 
-        // Calculate the direction vector from the player's position to the mouse position
+        //Calculate the direction through a vector
         Vector3 direction = (mousePosition - transform.position).normalized;
 
-        // Calculate the angle in degrees
+        //Calculate angle in degrees
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Add a 90-degree offset to the angle
+        //Add a offset cause it's offset for some reason?
         angle += 90f;
 
-        // Apply the rotation to the weapon
+        //Apply the rotation
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // Adjust the weapon's sorting order based on rotation
+        //Adjust the sorting order based on rotation
         if (angle < 90 && angle > -90)
         {
+            //Put it under player
             weaponSpriteRenderer.sortingLayerName = playerSpriteRenderer.sortingLayerName;
             weaponSpriteRenderer.sortingOrder = playerSpriteRenderer.sortingOrder - 1;
         }
         else
         {
+            //Put it over player
             weaponSpriteRenderer.sortingLayerName = playerSpriteRenderer.sortingLayerName;
             weaponSpriteRenderer.sortingOrder = playerSpriteRenderer.sortingOrder + 1;
-        }
-
-        // Debug log the rotation angle
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Rotation Angle: " + angle);
         }
     }
 
@@ -161,6 +160,7 @@ public class WeaponAim : MonoBehaviour
     //Item Functions
     public void ItemDamageIncrease()
     {
+        //Increase damage from item pick ups
         meleeDamage = (float)(meleeDamage * 1.3);
         rangedDamage = (float)(meleeDamage * 1.3);
     }
